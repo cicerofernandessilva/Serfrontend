@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ccc;
+    margin: 0;
+}    
+.hero {
+    background-image: url(/imagens/bg-3.jpg);
+    height: 500px;
+    background-position: right center;
+    background-size: cover;
+}
+.hero-content {
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+}
+.hero-content h1 { /* h1 descendente do hero-content */
+    text-transform: uppercase;
+    font-size: 46px;
+    text-shadow: 3px 3px 5px #333; /* incluir sombra*/
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+.content-section {
+    background-color: white;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+footer {
+    height: 80px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    background-color: #333;
+    line-height: 80px;
+}
+
+.content-header {
+    background-color: rgb(204, 202, 202);
+    font-family: sans-serif;
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    border-bottom: solid 3px rgb(134, 131, 131);
+    margin-top: 10px;
+}
+
+ul {
+    line-height: 2;
+    list-style-type: none;
+    padding-left: 0;
+    list-style-position: inside; /* coloca a lista alinhada com os demais itens */
+}
+
+
+.testo {
+    text-transform: uppercase;
+    font-size: 22px;
+    background-color: #333;
+}
+
+a {
+    color: white;
+    text-decoration: none;/*tira sublinhado do link*/
+}
+a:hover {
+    text-decoration: underline;/*coloca sublinhado do link quando mause passa sobre*/
+}
