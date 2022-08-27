@@ -8,6 +8,15 @@
 .hero-content {
     background-color: purple;
 }
+
+.content-section {
+    background-color: cornflowerblue;
+}
+
+.card {
+    background-color: darkcyan;
+}
+
 footer {
     background-color: gray;
 }
