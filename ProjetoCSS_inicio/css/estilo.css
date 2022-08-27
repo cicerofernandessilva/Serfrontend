@@ -8,6 +8,7 @@ body {
     height: 500px;
     background-position: right center;
     background-size: cover;
+    border-top: 1px solid transparent; /* para funcionar alinhamento de hero nav ul */
 }
 .hero-content {
     text-align: center;
@@ -23,6 +24,63 @@ body {
 main {
     width: 80%;
     margin: auto;
+}
+
+.hero nav ul {
+    text-align: right; /*ajuste de texto do menu a direita*/
+    margin: 25px 25px 0 0;
+}
+
+.hero nav li {
+    display: inline-block;
+    list-style: none;
+    border: 1px solid rgb(207, 201, 201);
+    margin-left: 10px;
+}
+
+.hero nav a{
+    
+    display: block;
+    /*background-color: rgb(255,0,0);*/
+    background-color: rgba(0, 0, 0, 0.205);/*modo que permite ajuste de transparência*/
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5;
+   
+}
+
+.hero nav a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card li {
+    display: inline-block;
+    border: 3px solid rgb(187, 185, 185);
+    margin-left: 10px;
+}
+
+.card ul a {
+    display: block;
+    /*background-color: rgb(255,0,0);*/
+    background-color: rgba(0, 0, 0, 0.205);/*modo que permite ajuste de transparência*/
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5;
+
+}
+
+.card ul a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    display: block;
 }
 
 .content-section {
