@@ -4,7 +4,7 @@ body {
     margin: 0;
 }    
 .hero {
-    background-image: url(/imagens/bg-3.jpg);
+    background-image: url(/ProjetoCSS_inicio/imagens/bg-3.jpg);
     height: 500px;
     background-position: right center;
     background-size: cover;
