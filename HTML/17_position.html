@@ -1,0 +1,226 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                font-family: sans-serif;
+                font-size: 22px;
+            }
+            #um{
+                background: red;
+                padding: 10px;
+                width: 100%;
+                height: 150px;
+            }
+            #dois{
+                background: orange;
+                padding: 10px;
+                width: 80%;
+                height: 100px;
+            }
+            #tres{
+                background: yellow;
+                padding: 10px;
+                width: 45px;
+                height: 45px;
+                position: relative;
+                bottom: 0;
+                right: 10px;
+            }
+
+            #container1 div{
+                width: 550px;
+                position: static;
+            }
+            .div1{
+                background: red;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .div2{
+                border: 2px solid black;
+                background: orange;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .div3{
+                background: yellow;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            #container1 .div2{
+                position: relative;
+                left: 10px;
+                top: 10px;
+            }
+
+            #container2 div{
+                width: 550px;
+                position: static;
+            }
+            .div4{
+                background: red;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .div5{
+                border: 2px solid black;
+                background: orange;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .div6{
+                background: yellow;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            #container2 .div5{
+                position: absolute;
+                left: 10px;
+                top: 10px;
+            }
+            #container3 div{
+                position: relative;
+                top: 50px;
+                width: 550px;
+            }
+            .div7{
+                background: red;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .div8{
+                border: 2px solid black;
+                background: orange;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .div9{
+                background: yellow;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            #container3 .div8{
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+
+            #container4 div{
+                position: static;
+                top: 50px;
+                width: 550px;
+            }
+            .div10{
+                background: red;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .div11{
+                border: 2px solid black;
+                background: orange;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .div12{
+                background: yellow;
+                padding: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            #container4 .div11{
+                position: fixed;
+                bottom: 0px;
+                right: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Estrutura básica - Position</h1>
+            <p><a href="https://www.4devs.com.br/gerador_de_texto_lorem_ipsum">gerador de lorem ipsom</a></p>
+            <div id="um"> 1
+                <div id="dois"> 2
+                    <div id="tres"> 3</div>  
+                </div>
+            </div>
+            <p>
+            Tortor augue placerat nullam est cursus pharetra donec iaculis lobortis ultrices, ut inceptos tortor ipsum bibendum leo senectus iaculis aenean. 
+            eleifend malesuada quam habitasse cras molestie convallis erat placerat ultricies, tristique integer libero tristique arcu hac luctus eu, inceptos id imperdiet ornare hendrerit dolor metus elementum nunc, dictumst elit egestas consectetur bibendum hendrerit urna. 
+            cras placerat est non mi condimentum interdum morbi convallis id class, placerat non pharetra ut ornare mi duis torquent convallis elementum, curabitur scelerisque iaculis proin ante massa quam mi molestie. 
+            nunc felis nostra lorem elementum diam ante cubilia eleifend ultrices, vel maecenas diam netus risus cras integer nisi pharetra, hendrerit et fringilla tristique nisl fringilla dictum aliquam. 
+            </p>
+            <p>
+            Etiam tincidunt tempor curabitur mollis volutpat litora augue inceptos etiam rhoncus inceptos, enim eros conubia mauris placerat pellentesque dapibus morbi adipiscing senectus, vulputate aenean dapibus integer donec habitasse laoreet amet maecenas luctus. 
+            est vehicula suscipit tincidunt ligula in arcu donec bibendum sem, eget auctor facilisis tristique scelerisque sagittis integer faucibus eget, vel facilisis accumsan proin suscipit praesent et euismod. 
+            donec ut potenti ut arcu aptent ultricies himenaeos ullamcorper convallis, aliquam non ac semper curae dictumst purus orci maecenas, vulputate non dolor urna pretium morbi aenean eu. 
+            tristique dui aenean lectus eleifend himenaeos convallis felis est, nullam laoreet primis turpis mi vestibulum ut, dictumst nibh sit tempus condimentum congue aenean. 
+            </p>
+            <p>
+            Placerat interdum inceptos torquent hendrerit turpis vivamus nulla consequat eu aenean, fusce platea adipiscing cursus praesent consectetur cubilia vivamus congue vestibulum, per fusce mauris aliquet venenatis vehicula hendrerit id eget. 
+            ante sapien lorem non sem suscipit senectus augue suscipit consectetur etiam rutrum commodo nisl risus porta gravida, dolor iaculis blandit primis curae pulvinar at accumsan erat lobortis cras cubilia per mi nam. 
+            himenaeos neque conubia justo proin litora dictum mollis sapien, dui augue volutpat maecenas non donec condimentum donec habitasse, erat ultrices porttitor sed egestas nisi nostra. 
+            vel adipiscing tellus mollis vulputate sem eget, phasellus curabitur aliquam feugiat eleifend sociosqu, torquent conubia in pellentesque donec. 
+            </p>
+            <p>
+            Facilisis venenatis aenean at purus urna dictumst donec odio morbi hac adipiscing, aenean sagittis duis inceptos aliquam neque blandit habitant bibendum iaculis nisi bibendum, platea non facilisis morbi lobortis mi tincidunt gravida maecenas ut. 
+            turpis quisque imperdiet mi viverra himenaeos aptent viverra, nulla et vulputate gravida orci augue lacinia scelerisque, quisque nullam torquent elementum nibh donec. 
+            luctus cubilia sagittis velit mauris nunc sociosqu nullam vehicula facilisis mauris, pulvinar eros in nullam congue sodales ut neque phasellus, quam tincidunt netus dui nulla justo felis taciti arcu. 
+            massa pretium phasellus netus rhoncus vestibulum dictum feugiat, malesuada cursus elit aliquet nibh ultrices metus elit, gravida sed blandit per luctus erat. 
+            </p>
+            <p>
+            A quis ac neque phasellus etiam rutrum nulla pulvinar, etiam torquent enim ut praesent velit habitasse. 
+            malesuada facilisis suspendisse condimentum rutrum class vulputate erat himenaeos, id taciti auctor pellentesque hac vel mauris placerat, ornare orci accumsan ornare at neque volutpat. 
+            bibendum iaculis vel venenatis pretium felis curae metus dictumst, gravida nulla aliquam velit quam tempor in, blandit quisque risus donec quisque sagittis lobortis. 
+            ullamcorper etiam scelerisque facilisis, sodales. 
+            </p>
+        </div>
+
+        <div id="container1">
+            <h1>Estrutura básica - Position</h1>
+            <div class="div1">div1</div>
+            <div class="div2">div2</div>
+            <div class="div3">div3</div>
+        </div>
+        <hr>
+        <div id="container2">
+            <h1>Estrutura básica - Position</h1>
+            <div class="div4">div4</div>
+            <div class="div5">div5</div>
+            <div class="div6">div6</div>
+        </div>
+        <hr>
+        <div id="container3">
+            <h1>Estrutura básica - Position</h1>
+            <div class="div7">div7</div>
+            <div class="div8">div8</div>
+            <div class="div9">div9</div>
+        </div>
+        <hr>
+        <div id="container4">
+            <h1>Estrutura básica - Position</h1>
+            <div class="div10">div10</div>
+            <div class="div11">div11</div>
+            <div class="div12">div12</div>
+        </div>
+    </body>
+</html>
