@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ccc;
+    margin: 0;
+}    
+.hero {
+    background-image: url(/ProjetoCSS_inicio/imagens/bg-3.jpg);
+    height: 500px;
+    background-position: right center;
+    background-size: cover;
+    border-top: 1px solid transparent; /* para funcionar alinhamento de hero nav ul */
+}
+.hero-content {
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+}
+.hero-content h1 { /* h1 descendente do hero-content */
+    text-transform: uppercase;
+    font-size: 46px;
+    text-shadow: 3px 3px 5px #333; /* incluir sombra*/
+}
+
+.hero-content p{ /* h1 descendente do hero-content */
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* incluir sombra*/
+    border-bottom: 2px solid rgba(230, 224, 224, 0.699);
+}
+
+
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+.hero nav ul {
+    text-align: right; /*ajuste de texto do menu a direita*/
+    margin: 25px 25px 0 0;
+}
+
+.hero nav li {
+    display: inline-block;
+    list-style: none;
+    border: 1px solid rgb(207, 201, 201);
+    margin-left: 10px;
+}
+
+.hero nav a{
+    
+    display: block;
+    /*background-color: rgb(255,0,0);*/
+    background-color: rgba(0, 0, 0, 0.205);/*modo que permite ajuste de transparência*/
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5;
+   
+}
+
+.hero nav a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.card{
+    width: 32%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.card-1, .card-2 {
+    margin-right: 2%;
+
+}
+
+.card p{
+    text-align: center;
+    background-color: rgba(31, 28, 28, 0.637);
+    margin: 0%;
+    padding: 15px;
+}
+.card p a{
+    text-transform: uppercase;
+    font-size: 22px;
+    color: white;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.hero2 {
+    text-align: center;
+    background-color: rgba(31, 28, 28, 0.637);
+    margin: 0%;
+    padding: 15px;
+    color: white;
+    border-bottom: 5px solid rgba(78, 75, 75, 0.5);
+}
+
+.content-section {
+    background-color: white;
+    padding: 15px;
+    margin-top: 15px;
+    overflow: auto;
+}
+
+footer {
+    height: 80px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    background-color: #333;
+    line-height: 80px;
+}
+
+.content-header {
+    background-color: rgb(204, 202, 202);
+    font-family: sans-serif;
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    border-bottom: solid 3px rgb(134, 131, 131);
+    margin-top: 10px;
+}
+
+ul {
+    line-height: 2;
+    list-style-type: none;
+    padding-left: 0;
+    list-style-position: inside; /* coloca a lista alinhada com os demais itens */
+}
+
+a {
+    color: black;
+    text-decoration: none;/*tira sublinhado do link*/
+}
+a:hover {
+    text-decoration: underline;/*coloca sublinhado do link quando mause passa sobre*/
+}
