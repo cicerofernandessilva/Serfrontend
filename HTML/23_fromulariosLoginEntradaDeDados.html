@@ -10,7 +10,7 @@
 
         <style>
             .formLogin{
-                width: 250px;
+                width: 350px;
                 margin: 50px auto 0;
                 font-family: sans-serif;
             }
@@ -25,13 +25,17 @@
                 margin-top: 5px;
             }
 
-            #user, #pass, .btn {
+            #user, #pass, .btn, #aniver, #filhos {
                 display: block; /* faz com que os textos fiquem em linhas diferentes*/
                 width: 100%; /* tamnho do imput*/
                 box-sizing: border-box; /* ingnorar paddin por padrão do input*/
                 padding: 15px;
                 font-size: 18px;
                 border: none; /* tira as bordas*/
+            }
+
+            #sexo {
+                display: inline-block;
             }
 
             .btn{
@@ -42,15 +46,16 @@
                 margin-bottom: 15px;
             }
 
-            #user, #pass{
+            #user, #pass, #aniver, #sexo, #filhos, #email, #sexo{
                 background: #ddd;
 
             }
 
-            #user:focus, #pass:focus{
+            #user:focus, #pass:focus, #aniver:focus, #sexo:focus, #filhos:focus, #email:focus, #sexo:focus{
                 background: white;
 
             }
+
 
 
 
@@ -63,16 +68,124 @@
         <form action="/HTML/22_fromulariosLogin.html" method="post" class="formLogin">
             <fieldset>
 
-                <legend>Login</legend>
+                <legend>text</legend>
 
                 <label for="user">Digite seu nome</label>
-                <input type="text" id="user" name="user" autofocus>
+                <input type="text" id="user" name="user" autofocus required>
+            </fieldset>
+            <fieldset>
+                <legend>e-mail</legend>
+
+                <label for="email" >Digite seu e-mail</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+            <fieldset>
+                    
+
+                <legend>Filhos</legend>
                 
-                <label for="pass">Digite sua senha</label>
-                <input type="password" id="pass" name="pass">
+                <label for="filhos">Digite a quantidade de filhos</label>
+                <input type="number" id="filhos" name="filhos" min="1" max="20">
+                
+            </fieldset>
+            <fieldset>
+                    
+                <legend>Data de nascimento</legend>
+
+                <label for="aniver">Digite a data de nascimento</label>
+                <input type="date" id="aniver" name="aniver" min="2000-01-30" max="2030-01-30">
+                
+            </fieldset>
+            <fieldset>        
+
+                <legend>sexo</legend>
+
+                <label for="sexo">Masculino
+                    <input type="radio" id="sexo" name="sexo" value="M">
+                </label>
+                <label for="sexo">Feminino
+                    <input type="radio" id="sexo" name="sexo" value="F">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend >Estados</legend>
+                <select nome="estado" id="estado">
+                    <option volue="SP">São Paulo</option>
+                    <option volue="MG">Minas Gerais</option>
+                    <option volue="RJ">Rio de Janeiro</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend >Areas de Interesse</legend>
+                <label for="inter"><input type="checkbox" name="html" value="html">HTML</label>
+                <label for="inter"><input type="checkbox" name="css" value="css">CSS</label>
+                <label for="inter"><input type="checkbox" name="javascript" value="javascript">JavaScript</label>
+                
+            </fieldset>
+            <fieldset>
+                <legend >Mensagens</legend>
+                <textarea name="msg" id="msg" cols="30" rows="10">Digite Aqui</textarea>
+
+                <textarea name="contrato" id="msg" cols="30" rows="10" readonly> não pode editar</textarea>
+                <textarea name="contrato" id="msg" cols="30" rows="10" disabled> não pode editar</textarea>
+                <label for="aceite"><input type="checkbox" checked>Li e Aceito</label>
+
+            </fieldset>
+            <fieldset>
+                <legend >Type Hidden</legend>
+                <input type="hidden" name="expira" value="2018-12-01">
+
+            </fieldset>
+            <fieldset>
+                <legend >Type submit, button e reset</legend>
+                <input type="submit" name="enviar" id="enviar">
+                <input type="button" name="nada" id="nada">
+                <input type="reset" name="reseta" id="reseta">
+
+            </fieldset>
+            <fieldset>
+                <legend >Telefone</legend>
+                <input type="tel" name="telefone" id="telefone">
+
+            </fieldset>
+            <fieldset>
+                <legend >URL</legend>
+                <input type="url" name="url" id="url">
+
+            </fieldset>
+            <fieldset>
+                <legend >pesquisa</legend>
+                <input type="search" name="pesquisa" id="pesquisa">
+                
+            </fieldset>
+            <fieldset>
+                <legend >range</legend>
+                <input type="range" min="1" max="20" stap="2">
+
+            </fieldset>
+            <fieldset>
+                <legend >Cor</legend>
+                <input type="color">
+
+            </fieldset>
+            <fieldset>
+                <legend >hora</legend>
+                <input type="time">
+
+            </fieldset>
+            <fieldset>
+                <legend>Multiple</legend>
+                <select name="opcao" id="opcao" size="5" multiple>
+
+                    <option type="op1">opção1</option>
+                    <option value="op2">opção2</option>
+                    <option value="op3">opção3</option>
+                    <option value="op4">opção4</option>
+                    <option value="op5">opção5</option>
+                </select>
 
                 <input type="submit" value="logar" class="btn">
-
+                
             </fieldset>
 
         </form>
