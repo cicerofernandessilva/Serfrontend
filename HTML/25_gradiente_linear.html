@@ -9,10 +9,14 @@
         <meta name="keywords" content="html5, tecnologia">
 
         <style>
+            h1{
+                text-align: center;
+            }
+
             div{
                 display: inline-block;
             }
-            .div1{
+            .div1, .div2{
                 float: right;
             }
             #radius{
@@ -113,7 +117,7 @@
                 margin: 50px auto;
                 border-radius: 40%;
                 box-shadow: -10px -10px 5px -1px red, 10px 10px 10px -1px black, -15px 10px 10px -1px blue ,10px -15px 10px -1px green;
-                background-image: linear-gradient( to right, red, transparent),( to left, blue, transparent);
+                background-image: linear-gradient( to right, red, transparent),linear-gradient( to left, blue, transparent);
             }
             #radius11{
                 background-color: orange;
@@ -122,7 +126,7 @@
                 margin: 50px auto;
                 border-radius: 55px 110px/ 110px 50px;
                 box-shadow: -10px -10px 5px 20px red, 10px 10px 5px 20px black;
-                background-image: linear-gradient( to left top, red, blue);
+                background-image: linear-gradient( to left top, rgba(207, 151, 151, 0.5), transparent), url(/ProjetoCSS_inicio/imagens/bg-1.jpg);
             }
             #radius12{
                 background-color: orange;
@@ -131,14 +135,14 @@
                 margin: 50px auto;
                 border-radius: 55px 110px/ 110px 50px;
                 box-shadow: -10px -10px 5px 20px red, 10px 10px 5px 20px black;
-                background-image: linear-gradient( to left top, red, blue);
+                background-image: linear-gradient( to left top, red, blue,white, green, yellow);
             }
 
 
         </style>
     </head>
     <body>
-        <h1>Estrutura CSS Border Radius</h1>
+        <h1>Efeitos CSS linear-gradient</h1>
         <div class="div1">
 
             <div id="radius">
