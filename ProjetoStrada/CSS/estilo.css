@@ -1,0 +1,9 @@
+@font-face{
+    font-family: "opensans";
+    src: url(/ProjetoStrada/fonts/OpenSans-Regular.ttf);
+}
+
+body{
+    font-family: opensans, Arial, Helvetica, sans-serif;
+    color: #666;
+}
