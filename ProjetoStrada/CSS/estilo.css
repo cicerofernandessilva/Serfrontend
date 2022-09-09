@@ -27,7 +27,7 @@ p{
 h1, h2, h3, h4, h5, h6{
     color: #787878;
     font-weight: normal;
-    margin: 0 0 1em;
+    margin: 1em 0 1em;
 }
 
 h1{
@@ -82,6 +82,136 @@ code{
 
 pre code{
     display: block;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 1.1em;
+}
+
+li{
+    padding-left: .5em;
+}
+
+.ul-alternate{
+    list-style: none;
+    padding-left: 0;
+}
+
+.ul-alternate li{
+    border-bottom: 2px solid #ccc;
+    padding-left: 0;
+}
+
+.ul-alternate li:last-child{
+    border-bottom: transparent; /*tirar borda do ultimo elemento*/
+}
+
+.ul-icon{
+    list-style: none;
+    padding-left: 0;
+    list-style: none;
+    font-size: 26px;
+    color: rgb(28, 163, 163);
+}
+
+.ul-icon li{
+    padding-left: 0;
+    display: inline-block;
+    padding: .5em;
+}
+
+.ul-icon a{
+    border-bottom: transparent;
+}
+
+.ul-icon a:hover{
+    transition: color 2s linear;
+    color: rgb(5, 95, 95)
+}
+
+.row{
+    overflow: auto;
+
+}
+
+.col-2{
+    width: 50%;
+    float: left;
+}
+
+.buttom_default{
+    background-color: #49bf9d;
+    color: white;
+    border: 2px solid #49bf9d;
+    padding: .75em 2.5em;
+    border-radius: 5px;
+    font-size: .8em;
+    display: inline-block;
+}
+
+.buttom_default:hover{
+    transition: background-color .7s linear;
+    background-color: rgb(5, 95, 95)
+}
+
+.buttom_default-stroke{
+    background-color: white;
+    color: inherit;
+    border-color: #efefef ;
+}
+
+.buttom_default-stroke:hover{
+    transition: background-color .7s linear;
+    background-color: rgba(132, 209, 209, 0.205)
+}
+
+.buttom_default-small{
+    font-size: .65em;
+}
+
+.buttom_default-full{
+    text-align: center;
+    display: block;
+}
+
+.table{
+    width: 100%;
+    margin: 0 0 2em 0;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.table th{
+    background: #ddd;
+    padding: .75em;
+}
+
+.table td{
+    padding: .75em;
+}
+
+.table tbody tr:first-child td{
+    border-top: 2px solid #ccc;
+}
+
+.table tbody tr:last-child td{
+    border-top: 2px solid #ccc;
+}
+
+.table tbody tr:nth-child(1) td, .table tbody tr:nth-child(3) td, .table tbody tr:nth-child(5) td{
+    background: #eee;
+}
+
+.table-alternate tbody tr:nth-child(odd) td{
+    background: #9494943b;
+}
+
+.table-alternate tbody td, .table-alternate  tbody tr:last-child td, .table-alternate  tbody tr:first-child td{
+    border: 1px solid #9494943b;
+
+    
 }
 
 .main-header{
