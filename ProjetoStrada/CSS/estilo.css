@@ -94,6 +94,10 @@ li{
     padding-left: .5em;
 }
 
+span i{
+    padding-right: 1em;
+}
+
 .ul-alternate{
     list-style: none;
     padding-left: 0;
@@ -163,6 +167,48 @@ li{
     margin-left: 3%;
 }
 
+/*galeria de imagens*/
+.galery-img img{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.col-1{
+    max-width: 33%;
+    float: left;
+}
+
+.col-1 img{
+    width: 98%;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    display: inline-block;
+}
+
+/*Imagens 2*/
+
+.galery-img-2 img{
+    width: 100%;
+}
+
+.galery-tumbs2 img, .galery-img-2 img{
+    margin-bottom: 2%;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.col-3{
+    width: 32%;
+    float: left;
+    border-radius: 5px;
+}
+
+.col-3:nth-child(3n - 1){
+    margin: 0 2%;
+}
+
 .row-col-2-3{
     display: block;
 }
@@ -172,13 +218,13 @@ li{
     font-size: 2em;
 }
 
-input, label, textarea{
+input, label, textarea, select{
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
 }
 
-input, textarea{
+input, textarea, select{
     background: #eee;
     padding: 15px;
     border-radius: 5px;
@@ -190,9 +236,56 @@ textarea{
     height: 150px;
 }
 
+fieldset{
+    border: none;
+}
+
+fieldset input[type="text"], input[type="email"]{
+    width: 100%;
+}
+
+input[type="checkbox"], input[type="radio"]{
+    width: auto;
+    margin: 1em;
+}
+
+
+
 input:focus, textarea:focus{
     border: 3px solid aqua;
     outline: none;/*tirar borda de focus do bruser*/
+}
+
+.recent-work-card-image{
+    border: none;
+    width: 100%;
+}
+
+.recent-work-card-image img{
+    border-radius: 10%;
+    max-width: 100%;
+}
+
+.main-header img{
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.image-left{
+    float: left;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 1em;
+}
+
+.image-right{
+    float: right;
+    box-sizing: border-box;
+    border-radius: 30%;
+    max-width: 100%;
+    margin: 1em;
+
 }
 
 .buttom_default{
