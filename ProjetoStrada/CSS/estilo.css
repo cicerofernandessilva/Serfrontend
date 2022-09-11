@@ -348,19 +348,20 @@ input:focus, textarea:focus{
 
 .lin-2{
     display: inline-block;
-    background: orange;
     width: 100%;
 }
 
 .lin-2 .buttom_default{
     max-width: 48.5%;
     margin: 1em;
+    box-sizing: border-box;
 }
 .lin-2 .buttom-action-default-full{
     display: inline-block;
     align-self: baseline;
     max-width: 50%;
     width: 100%;
+    box-sizing: border-box;
 }
 
 div .lin-2-2{
@@ -430,6 +431,23 @@ div .lin-2-2{
     background-position: left top;
     background-size: auto, cover;
     text-align: right;
+}
+
+.main-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 35%;
+    padding: 0 54px 72px 0;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.copyright{
+    list-style: none;
+}
+.copyright li{
+    display: inline-block;
 }
 
 .main-header-title{
