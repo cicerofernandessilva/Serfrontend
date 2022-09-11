@@ -64,6 +64,14 @@ blockquote{
     padding: .5em 0 .5em 2em;
 }
 
+blockquote p{
+    margin-bottom: .5em;
+}
+
+blockquote p:last-child{
+    margin-bottom: 0;
+}
+
 q{
     border-left:  5px solid #efefef;
     margin: 2em 0;
@@ -133,6 +141,13 @@ span i{
 .ul-icon a:hover{
     transition: color 2s linear;
     color: rgb(5, 95, 95)
+}
+
+.hidden{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    display: block;
 }
 
 .row{
