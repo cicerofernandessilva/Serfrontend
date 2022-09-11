@@ -137,11 +137,10 @@ span i{
 
 .row{
     overflow: auto;
-
 }
 
 .col-2{
-    width: 48.5%;
+    width: 48%;
     float: left;
 }
 
@@ -300,22 +299,36 @@ input:focus, textarea:focus{
     border-radius: 5px;
     font-size: .8em;
     display: inline-block;
+    margin: .5em;
+    cursor: pointer;
 }
 
 .buttom_default:hover{
-    transition: background-color .7s linear;
-    background-color: rgb(5, 95, 95)
+    transition: all .5s linear;
+    background-color: white;
+    color: inherit;
+    border-color: #efefef;
+    border-bottom: 2px solid #efefef;
 }
+
+
 
 .buttom_default-stroke{
     background-color: white;
     color: inherit;
-    border-color: #efefef ;
+    border: 2px solid #efefef ;
+    padding: .75em 2.5em;
+    border-radius: 5px;
+    font-size: .8em;
+    display: inline-block;
+    margin: .5em;
 }
 
 .buttom_default-stroke:hover{
-    transition: background-color .7s linear;
-    background-color: rgba(132, 209, 209, 0.205)
+    transition: all .5s linear;
+    background-color: #49bf9d;
+    color: white;
+    border-color: #49bf9d;
 }
 
 .buttom_default-small{
@@ -325,7 +338,47 @@ input:focus, textarea:focus{
 .buttom_default-full{
     text-align: center;
     display: block;
+    width: 100%;
 }
+
+/*configuração bug no action*/
+.action-row{
+    overflow: auto;
+}
+
+.lin-2{
+    display: inline-block;
+    background: orange;
+    width: 100%;
+}
+
+.lin-2 .buttom_default{
+    max-width: 48.5%;
+    margin: 1em;
+}
+.lin-2 .buttom-action-default-full{
+    display: inline-block;
+    align-self: baseline;
+    max-width: 50%;
+    width: 100%;
+}
+
+div .lin-2-2{
+    width: 50%;
+    float: left;
+}
+
+
+.buttom-action-default-full{
+    text-align: center;
+    align-self: center;
+    max-width: 100%;
+    width: auto;
+    display: block;
+}
+
+
+/*configuração bug no action*/
 
 .table{
     width: 100%;
