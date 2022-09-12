@@ -1,0 +1,61 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            div{
+                border: 3px solid red;
+                width: 450px;
+                text-align: center;
+                position: relative;
+            }
+
+            div:before{
+                content: "antes";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            div:after{
+                content: "Depois";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: blueviolet;
+                font-size: 22px;
+            }
+    
+        </style>
+    </head>
+    <body>
+        <h1>Inserindo Conteúdo com CSS</h1>
+
+        <Div>
+            <p>inserindo conteúdo</p>
+        </Div>
+
+        <article>
+        <h3>Seletores Compostos</h3>
+        <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+        <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+        <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+        </article>
+
+        <article>
+            <h3>Seletores Compostos Decendente</h3>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+        </article>
+
+    </body>
+</html>

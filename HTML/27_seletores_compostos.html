@@ -1,0 +1,163 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            .one article{
+                background: orange;
+            }
+            .one p{
+                background: blue;
+                margin-left: 1em;
+                width: 25%;
+            }
+            .one a{
+                background: red;
+                margin-left: 1em;
+            }
+
+            .one b{
+                background: green;
+                margin-left: 1em;
+            }
+
+            /* retirar decendência aplicada no "article a"*/
+            .one a{
+                font-size: inherit;
+            }
+
+            article a{ /*descendente, todo a descendente de article */
+                font-size: 2em;
+            }
+
+            .two a > b{
+                color: aqua;
+            }
+            .two p > b{
+                color: aqua;
+            }
+
+            .irmao p + b{
+                color: blueviolet;
+            }
+
+            .irmao b + a{
+                color: blueviolet;
+            }
+
+            .irmaoproximo h3 ~ p{
+                color: blueviolet;
+            }
+
+            p[class]{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 1em;
+            }
+
+            a[title]{
+                color: brown;
+            }
+
+            a[class]{
+                color: yellowgreen;
+            }
+
+            b[alt]{
+                font-size: 2em;
+            }
+
+            a[href^="1"]{
+                font-size: 15px;
+                margin-left: 1em;
+            }
+
+            a[href$="4"]{
+                font-size: 22px;
+                font-family: 'Courier New', Courier, monospace;
+                color: red;
+            }
+
+            .negacao a:not([target]){
+                text-decoration: none;
+            }
+
+    
+        </style>
+    </head>
+    <body>
+        <h1>Seletores Avançados</h1>
+        <div class="one">
+            <article>
+                <h3>Seletores Compostos</h3>
+                <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+                <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+                <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            </article>
+            
+        </div>
+
+        <article>
+            <h3>Seletores Compostos Decendente</h3>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+        </article>
+
+        <article class="two">
+            <h3>Seletores Compostos filho direto</h3>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<b>negrito</b><a href="#">Link</a></p>
+        </article>
+
+        <article class="irmao">
+            <h3>Seletores Compostos Irmão Adjacente</h3>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<b>negrito</b><a href="#">Link</a></p>
+        </article>
+        
+        <article class="irmaoproximo">
+            <h3>Seletores Compostos Irmão proximo</h3>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b>negrito</b></a></p>
+            <p>Paragrafo<b>negrito</b><a href="#">Link</a></p>
+        </article>
+
+        <article class="atributos">
+            <h3>Seletores Compostos Atributos</h3>
+            <p>Paragrafo<a href="#" title="">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#" class="">Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#">Link<b alt="">negrito</b></a></p>
+            <p class="">Paragrafo<b>negrito</b><a href="#">Link</a></p>
+        </article>
+
+        <article class="atributos">
+            <h3>Seletores Compostos Atributos inicial e Final</h3>
+            <p>Paragrafo<a href="123" >Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="123" >Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="https//google.com" target="_blank">Link<b>negrito</b></a></p>
+            <p >Paragrafo<b>negrito</b><a href="123">Link</a></p>
+            <p >Paragrafo<b>negrito</b><a href="1234">Link</a></p>
+        </article>
+
+        <article class="negacao">
+            <h3>Seletores Compostos Negação</h3>
+            <p>Paragrafo<a href="#" >Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="#" >Link<b>negrito</b></a></p>
+            <p>Paragrafo<a href="https//google.com" target="_blank">Link<b>negrito</b></a></p>
+            <p >Paragrafo<b>negrito</b><a href="#">Link</a></p>
+            <p >Paragrafo<b>negrito</b><a href="#">Link</a></p>
+        </article>
+
+    </body>
+</html>
