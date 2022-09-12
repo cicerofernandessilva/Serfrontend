@@ -1,0 +1,201 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            input[type="checkbox"]{
+                width: 100px;
+                height: 100px;
+            }
+
+            input[type="checkbox"]:checked{
+                width: 35px;
+                height: 35px;
+            }
+
+            button:disabled{
+                background: aqua;
+            }
+
+            p:empty::before{
+                content: "Parágrafo vasio é diferente de com espaço";
+            }
+
+            a:focus{
+                background: aqua;
+            }
+
+            a:hover{
+                color: rgba(41, 172, 172, 0.747);
+            }
+
+            div:focus{
+                background: aqua;
+                max-width: auto;
+            }
+
+            input::placeholder{
+                color: rgb(5, 78, 78);
+                font-size: 22px;
+            }
+
+            input:read-only{
+                color: blue;
+            }
+
+            input:disabled{
+                background-color: red;
+            }
+            
+            div p[class="1"]:nth-child(1){
+                color: royalblue;
+                font-size: 22px;
+            }
+
+            div p[class="1"]:nth-child(3){
+                color: royalblue;
+                font-size: 22px;
+            }
+
+            div p[class="2"]:nth-of-type(1){
+                color: greenyellow;
+                font-size: 22px;
+            }
+
+            div p[class="2"]:nth-of-type(3){
+                color: greenyellow;
+                font-size: 22px;
+            }
+
+            div p[class="3"]:first-child{
+                color: blue;
+                font-size: 22px;
+            }
+
+            div p[class="3"]:last-child{ /*o paragrafo não é o ultimo item da div, por isso não funciona*/
+                color: blue;
+                font-size: 22px;
+            }
+
+            div p[class="4"]:first-child{/*o paragrafo não é o primeiro item da div, por isso não funciona*/
+                color: blue;
+                font-size: 22px;
+            }
+
+            div p[class="4"]:last-child{
+                color: blue;
+                font-size: 22px;
+            }
+
+            div p[class="5"]:first-child{
+                color: red;
+                font-size: 22px;
+            }
+
+            div p[class="5"]:last-child{ /*o paragrafo não é o ultimo item da div, por isso não funciona*/
+                color: red;
+                font-size: 22px;
+            }
+
+            div p[class="6"]:first-child{/*o paragrafo não é o primeiro item da div, por isso não funciona*/
+                color: red;
+                font-size: 22px;
+            }
+
+            div p[class="6"]:last-child{
+                color: red;
+                font-size: 22px;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de Pseudo-Classes e Pseudo-Elementos</h1>
+        <h2>Pseudo-Classes Checked</h2>
+        <label><input type="checkbox" volue="sim">Aceite o contrato</label>
+        <hr>
+        <h2>Pseudo-Classes Disabled</h2>
+        <button>Vai</button>
+        <button disabled>Volta</button>
+        <hr>
+        <h2>Pseudo-Classes empty</h2>
+        <p>Paragrafo 1</p>
+        <p> </p>
+        <p></p>
+        <hr>
+        <h2>Pseudo-Classes focus e hover</h2>
+        <ul>
+            <li><a href="#">link 1</a></li>
+            <li><a href="#">link 2</a></li>
+            <li><a href="#">link 3</a></li>
+            <li><a href="#">link 4</a></li>
+        </ul>
+        <hr>
+        <h2>Pseudo-Classes DIV com Focus (uso do tabindex)</h2>
+        <div tabindex="1"><p>div1</p></div>
+        <div tabindex="2"><p>div2</p></div>
+        <div tabindex="3"><p>div3</p></div>
+        <hr>
+        <h2>Pseudo-Elementos Placeholder, disabled, readonly e readwrite</h2>
+        <input type="text">
+        <input type="text" value="Valor inicial">
+        <input type="text" value="Valor inicial" readonly>
+        <input type="text" value="Valor inicial" disabled>
+        <input type="text" placeholder="Valor inicial">
+
+        <h2>Pseudo-Classes nth-child e nth-of-type</h2>
+        <h3>Child</h3>
+        <div>
+            <p class="1">div1</p>
+            <p class="1">div2</p>
+            <hr>
+            <p class="1">div3</p>
+            <p class="1">div4</p>
+        </div>
+        <h3>type</h3>
+        <div>
+            <p class="2">div1</p>
+            <p class="2">div2</p>
+            <hr>
+            <p class="2">div3</p>
+            <p class="2">div4</p>
+        </div>
+
+        <h2>Pseudo-Classes First-child e Last-child</h2>
+        <h3>First-child</h3>
+        <div>
+            <p class="3">div1</p>
+            <p class="3">div2</p>
+            <p class="3">div1</p>
+            <p class="3">div2</p>
+            <hr>
+            <p class="4">div1</p>
+            <p class="4">div2</p>
+            <hr>
+            <p class="4">div4</p>
+            <p class="4">div4</p>
+        </div>
+        <h3>Last-child</h3>
+        <div>
+            <p class="5">div1</p>
+            <p class="5">div2</p>
+            <p class="5">div3</p>
+            <p class="5">div4</p>
+            <hr>
+            <p class="6">div1</p>
+            <p class="6">div2</p>
+            <hr>
+            <p class="6">div3</p>
+            <p class="6">div4</p>
+        </div>
+
+    </body>
+</html>
