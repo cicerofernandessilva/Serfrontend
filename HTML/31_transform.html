@@ -1,0 +1,182 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            .div1{
+                border: 2px solid #6666;
+                width: 200px;
+                height: 200px;
+                text-align: center;
+                background: red;
+                transform: translate(50%, 50%);
+
+            }
+
+            .div2{
+                border: 2px solid #6666;
+                width: 200px;
+                height: 200px;
+                text-align: center;
+                background: blue;
+
+            }
+
+            .div3{
+                border: 2px solid #6666;
+                width: 200px;
+                height: 200px;
+                text-align: center;
+                background: red;
+                transform: translatex(100px);
+
+            }
+            .div4{
+                border: 2px solid #6666;
+                width: 200px;
+                text-align: center;
+                background: blue;
+                transform: translatey(50px);
+
+            }
+
+            .div5{
+                border: 2px solid #6666;
+                width: 50%;
+                text-align: center;
+                overflow: hidden;
+
+            }
+            .div6{
+                background: yellow;
+                width: 50%;
+                transform: rotate(6deg);
+
+            }
+            .div7{
+                border: 2px solid #6666;
+                width: 50%;
+                text-align: center;
+                overflow: hidden;
+
+            }
+            .div8{
+                background: yellow;
+                width: 50%;
+                transform: rotate(-6deg);
+
+            }
+
+            .div9{
+                border: 2px solid #6666;
+                width: 50%;
+                text-align: center;
+                overflow: hidden;
+
+            }
+            .div10{
+                background: yellow;
+                width: 50%;
+                transform: rotate(-6deg);
+                transform-origin: right bottom;/*mudar centro de rotação*/
+
+            }
+
+            .div11{
+                border: 2px solid #6666;
+                width: 50%;
+                text-align: center;
+                overflow: hidden;
+
+            }
+            .div12{
+                background: yellow;
+                width: 50%;
+                transform: rotate(15deg) translate(50px, 25px); /*rotate mais translate*/
+
+            }
+
+            .div13{
+                width: 150px;
+                height: 150px;
+                background: yellow;
+                transform: skewX(-30deg);
+                transition: transform .7s linear;
+            }
+            .div13:hover{
+                transform: skew(3deg, 4deg);
+            }
+
+            .div14{
+                width: 150px;
+                height: 150px;
+                transform: scale(.5);
+                background: aquamarine;
+
+            }
+
+            .div14:hover{
+                transition: transform .7s linear;
+                transform: scale(1.5) translatex(150px);
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Transform</h1>
+        <div class="div1">
+            <p> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel augue interdum, posuere nisi ut, iaculis leo. 
+            </p>
+        </div>
+        <div class="div2">
+            <p> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel augue interdum, posuere nisi ut, iaculis leo. 
+            </p>
+        </div>
+        <hr>
+        <div class="div3">1</div>
+        <div class="div4">1</div>
+       
+        
+        <br><br><br>
+        <hr>
+        <div class="div5">
+            <div class="div6"><p>Lorem ipsum dolor</p></div>
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></div>
+
+        </div>
+
+        <hr>
+        <div class="div7">
+            <div class="div8"><p>Lorem ipsum dolor</p></div>
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></div>
+
+        </div>
+
+        <hr>
+        <div class="div9">
+            <div class="div10"><p>Lorem ipsum dolor</p></div>
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></div>
+
+        </div>
+
+        <hr>
+        <div class="div11">
+            <div class="div12"><p>Lorem ipsum dolor</p></div>
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p></div>
+
+        </div>
+
+        <hr>
+        <div class="div13">1</div>
+        <div class="div14">2</div>
+
+    </body>
+</html>
