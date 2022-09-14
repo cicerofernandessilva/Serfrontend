@@ -1,0 +1,89 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            a[target="_blank"]::after{
+                content: url(/HTML/imagens/newWindow.png);
+                display: inline-block;
+                margin-left: 6px;
+            }
+            a[href$=".br"]::before{
+                content: url(/HTML/imagens/pdf-icon.gif);
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            a[class="poke"]::after{
+                content: url(/HTML/imagens/png-transparent-pokemon-pokeball.png);
+                display: inline-block;
+                margin-left: 6px;
+                background: #eee;
+            }
+            a[class="poke"]::before{
+                content: url(/HTML/imagens/png-transparent-pokemon-pokeball.png);
+                display: inline-block;
+                margin-left: 6px;
+                background: #eee;
+            }
+
+            .chk{
+                display: inline-block;
+                background: #bbb;
+                border: 2px solid rgba(151, 145, 145, 0.781);
+                border-radius: 5px;
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+            label{
+                display: inline-block;
+                height: 15px;
+            }
+
+            input[type="checkbox"]{
+                width: 0px;
+                height: 0px;
+                overflow: hidden;
+                margin: 0;
+                display: inline-block;
+            }
+
+            input[type="checkbox"]:checked + label .chk{/*quando estiver checado, vai ao label e a classe chk*/
+                background: #666;
+                position: relative;
+            }
+
+            input[type="checkbox"]:checked + label .chk::before{/*quando estiver checado, vai ao label e a classe chk*/
+                content: "";
+                position: absolute;
+                top: -3px;
+                bottom: 4px;
+                left: 2px;
+                right: 2px;
+                border: 2px solid white;
+                transform: rotate(45deg);
+                border-left-color: transparent;
+                border-top-color: transparent;
+                box-sizing: border-box;
+                border-radius: 3px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura básica</h1>
+        <p><a href="http://goolge.com" target="_blank">Link externo</a></p>
+        <p><a href="http://goolge.com.br">link externo</a></p>
+        <p><a href="http://goolge.com" class="poke">Pokebola</a></p>
+        <hr>
+        <input type="checkbox" name="qq" id="chk">
+        <label for="chk"><span class="chk"></span>Li e aceito o contrato</label>
+    </body>
+</html>
