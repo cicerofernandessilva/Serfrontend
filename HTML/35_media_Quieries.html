@@ -1,0 +1,72 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <meta name="viewport" content="width-device-width">
+
+        <style>
+            body{
+                font-family: sans-serif;
+                background: yellowgreen;
+                font-size: 36px;
+            }
+
+            .media1{
+                background: red;
+                max-width: 300px;
+                height: 50px;
+            }
+
+            .container{
+                padding: 15px;
+                background: white;
+            }
+
+            .container div{
+                background: blue;
+                margin-bottom: 15px;
+                height: 150px;
+            }
+
+            .clearfix::after{/*limpar bug do float*/
+                content: " ";
+                display: block;
+                clear: both;
+            }
+
+            @media screen and (min-width: 400px){
+                body{
+                    background: goldenrod ;
+                }
+
+                .container div{ /*colocar em linha*/
+                    float: left;
+                    width: calc(50% - 20px);
+                    margin: 10px;
+                }
+            }
+
+            @media screen and (max-width: 300px){
+                body{
+                    background: blueviolet;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de Media Queries</h1>
+
+        <p>Parágrafo</p>
+        <Div class="media1"><p>div1</p></Div>
+        <div class="container clearfix">
+            <Div class="media2"><p>div1</p></Div>
+            <Div class="media2"><p>div1</p></Div>
+        </div>
+    </body>
+</html>

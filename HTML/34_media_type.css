@@ -1,0 +1,19 @@
+body{
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a::after{
+    content: "(" attr(href) ")";
+    display: inline-block;
+    margin: 0 10px;
+
+}
+
+.google::after{
+    content: attr(class);
+    display: inline-block;
+    margin: 0 10px;
+
+}
