@@ -38,8 +38,7 @@
                 width: 0px;
                 height: 0px;
                 overflow: hidden;
-                margin: 0;
-                display: inline-block;
+                opacity: 0; /*modificação para acessibilidade*/
             }
 
             input[type="checkbox"]:checked +.lind{/*quando estiver checado, vai ao label e a classe chk*/
@@ -126,6 +125,12 @@
             .t3 label input:checked + span::before{
                 transform: translate(30px);
                 background: red;
+            }
+
+            /*inclusão de acessibilidade */
+
+            label input:focus+span{
+                box-shadow: 0 0 0 1px red; /*cria uma borda falsa quando está em foco*/
             }
 
         </style>
