@@ -1,0 +1,65 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            html{
+                font-size: 32px;
+            }
+            body{
+                font: 16px sans-serif;
+                background: rgb(181, 167, 194);
+
+            }
+            h1{
+                text-align: center;
+            }
+
+            div{
+                background: rgb(196, 195, 195);
+                border: 5px solid #ccc;
+                /*padding: 16px;*/
+                padding: 1em; /*erda tamanho de 16px do elemento pay (body)*/
+                width: 320px;
+                width: 20em;/*tamanho do width herdado*/
+                margin: 50px auto;
+                /*100 (pai) / 16 = 6.25*/
+                margin: 6.25em auto;
+                /*font-size: 1em;*/
+            }
+
+            p{
+                margin: 0;
+                line-height: 1.5;
+                font-size: 20px;
+                font-size: 1.25em;
+                /* 16(tamanho de fonte erdado) X 1.25 = 20*/
+            }
+
+            a{
+                font-size: 24px;
+                font-size: 1.2em;
+                /*elemento pai de valor de 20, na situação 24 / 20 = 1.2 */
+            }
+
+            b{
+                font-size: 1rem;/*erdado tamnho da fonte pai*/
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura básica - Unidades de Medídas</h1>
+        <div>
+            <p>
+               <b>Lorem</b> ipsum donec vel ac sem ante felis, <a href="#">at sed auctor vitae euismod </a>facilisis sociosqu, velit odio gravida himenaeos lectus morbi. 
+                dolor viverra at curae placerat cubilia vivamus quis leo, sodales sed pharetra hac curabitur arcu curabitur tristique bibendum, molestie nec nullam nec platea etiam nisi. 
+            </p>
+        </div>
+    </body>
+</html>
