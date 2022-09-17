@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "oxygen";
+    src: url(fonts/Oxygen-Regular.ttf);
+}
+
+html{
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: oxygen;
+}
+
+.top-header {
+    text-align: center;
+}
+
+.top-header-img{
+    margin: .5em;
+}
+
+.top-header-nav{
+    background: #612674;
+    text-align: center;
+}
+
+.top-header-nav ul{
+    margin: 0;
+    padding: 2em 0;
+    list-style: none;
+}
+
+.top-header-nav a{
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+}
+
+.top-header-nav a:hover{
+    background: #7c3792;
+}
+
+.bottom{
+    display: inline-block;/*para aplicar margem*/
+    background: #58c4c4;
+    border-radius: 5px;
+    padding: 1em 3.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.bottom:hover{
+    background: #37a0a0;
+}
+
+.top-content{
+    padding: 1em;
+    text-align: center;
+    background: #f6f6f6;
+}
+
+.top-content-title{
+    color: #612674;
+    font-size: 1.375em; /*22px / 16 = */
+    margin: 1.375em;
+}
+
+.top-content-subtitle{
+    color: #a87bb7;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.mid-content{
+    text-align: center;
+    background: #f6f6f6;
+    line-height: 1.5;
+    padding: 2em;
+}
+
+.mid-content-title{
+    color: #652e79;
+    font-size: 1.375em; /*22px / 16 = */
+    margin: 1.375em;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
+
+.mid-content span[class^=icon]{
+    font-size: 3em;
+    color: #652e79;
+}
+
+.mid-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #222;
+}
+
+.main-content{
+    padding: 2em;
+}
+
+.main-content-title{
+    color: #652e79;
+    font-size: 1.375em; /*22px / 16 = */
+    margin: 1.375em;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
+
+.main-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #222;
+}
+
+
