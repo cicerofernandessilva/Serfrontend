@@ -1,0 +1,77 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        <meta name="viewport" content="width=device-width"> <!--Necessário para o picture funcionar-->
+
+        <style>
+            img{
+                margin: 1em;
+                max-width: 95%;
+            }
+            source{
+                margin: 1em;
+                max-width: 95%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura básica - Picture</h1>
+        <picture>
+            <source media="(min-width: 100px)" sizes="100vw"
+                 srcset="rwd-images/320_mob.jpg 280w,
+                    rwd-images/480.jpg 440w,
+                    rwd-images/640_mob.jpg 600w,
+                    rwd-images/822_mob.jpg 780w,
+                    rwd-images/960.jpg 920w,
+                    rwd-images/1280.jpg 1200w"
+            
+                 src="rwd-images/1280.jpg" alt="Texto alternativo">
+                 <img src="/HTML/imagens/bg.jpg" alt="teste">
+            <hr>
+        </picture>
+
+        <hr>
+        <h2>Teste 2</h2>
+        <picture>
+            <source media="(min-width: 100px)"
+                sizes="33vw"
+                 srcset="imagens/slide1.jpg 280w,
+                 imagens/slide2.jpg 440w,
+                 imagens/slide3.jpg 600w,
+                 imagens/slide4.jpg 780w"
+            
+                 src="imagens/css3.png" alt="Texto alternativo">
+                 <img src="/HTML/imagens/bg.jpg" alt="teste">
+        </picture>
+        <hr>
+        <h2>Teste 3</h2>
+        <picture>
+            <source media="(min-width: 100px)"
+                sizes="10vw"
+                 srcset="imagens/slide1.jpg 280w,
+                 imagens/slide2.jpg 440w,
+                 imagens/slide3.jpg 600w,
+                 imagens/slide4.jpg 780w"
+            
+                 src="imagens/css3.png" alt="Texto alternativo">
+                 <img src="/HTML/imagens/bg.jpg" alt="teste">
+        </picture>
+        <h2>Teste 4</h2>
+        <picture>
+            <source
+                 srcset="imagens/slide1.jpg 280w,
+                 imagens/slide2.jpg 440w,
+                 imagens/slide3.jpg 600w,
+                 imagens/slide4.jpg 780w"
+            
+                 src="imagens/css3.png" alt="Texto alternativo">
+                 <img src="/HTML/imagens/bg.jpg" alt="teste">
+        </picture>
+    </body>
+</html>
