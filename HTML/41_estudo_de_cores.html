@@ -1,0 +1,268 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            h1{
+                text-align: center;
+                color: blueviolet;
+                text-shadow: 2px 2px rgba(0, 0, 0, 0.527) ;
+            }
+
+            #div_cores{
+                padding: 1em;
+                background: url(/HTML/imagens/tile.png);
+                counter-reset: contador; /*adiciona um contato automático de div*/
+            }
+
+            #div_cores div{
+                padding: 1em;
+                width: 80%;
+                height: 10em;
+                border: 10px solid rgba(0,0,0, .5);
+                border-radius: 2em;
+                margin: 1.5em auto;
+                counter-increment: contador; /*adiciona um contato incrementador automático de div*/
+                background-size: cover ;
+            }
+
+            #div_cores div::before{
+                content: "["counter(contador)"]"; /*adiciona o número do contato a div*/
+            }
+
+            #div_cores div:nth-child(1){
+                background-color: blueviolet;
+            }
+            #div_cores div:nth-child(2){
+                background-color: blueviolet;
+                background-clip: content-box;
+            }
+
+            #div_cores div:nth-child(3){
+                background-color: blueviolet;
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(4){
+                background-color: blueviolet;
+                background-clip: border-box;
+            }
+
+            #div_cores div:nth-child(5){
+                background-color: rgb(50%, 50%, 0%);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(6){
+                background-color: rgba(50%, 50%, 0%, .5);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(7){
+                background-color: hsl(0deg, 50%, 0%);
+                background-clip: padding-box;
+                color: white;
+            }
+            #div_cores div:nth-child(8){
+                background-color: hsl(0deg, 50%, 50%);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(9){
+                background-color: hsla(0deg, 50%, 50%, .5);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(10){
+                background-image: linear-gradient(blueviolet, red);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(11){
+                background-image: linear-gradient(to bottom left, blueviolet, red);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(12){
+                background-image: linear-gradient(60deg, blueviolet, red);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(13){
+                background-image: linear-gradient(60deg, blueviolet, transparent);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(14){
+                background-image: linear-gradient(60deg, blueviolet, transparent), linear-gradient(to top, blue, transparent);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(15){
+                background-image: linear-gradient(60deg, blueviolet, transparent), linear-gradient(to top, blue, transparent);
+                background-clip: content-box, border-box;
+            }
+
+            #div_cores div:nth-child(16){
+                background-image: radial-gradient( yellow, blue);
+                background-clip: padding-box;
+            }
+            #div_cores div:nth-child(17){
+                background-image: radial-gradient( circle, yellow, blue);
+                background-clip: padding-box;
+            }
+            #div_cores div:nth-child(18){
+                background-image: radial-gradient( circle, yellow, blue, red, green);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(19){
+                background-image: radial-gradient( ellipse, yellow, blue, red, green);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(20){
+                background-image: radial-gradient( circle, yellow 10%, blue 20%, red 10%, green 70%);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(21){
+                background-image: radial-gradient( circle, yellow 10%, blue 20%, red 10%, green 70%);
+                background-clip: padding-box;
+                background-attachment: fixed, scroll;
+            }
+
+            #div_cores div:nth-child(22){
+                background-image: url(imagens/slide1.jpg);
+                background-clip: padding-box;
+                background-attachment: fixed, scroll;
+                color: white;
+            }
+
+            #div_cores div:nth-child(23){
+                background-image: radial-gradient( circle, hsla( 60deg, 100%, 50%, .5) 10%, hsla( 240deg, 100%, 50%, .5) 20%, hsla( 0deg, 100%, 50%, .5) 20%, green 70%);
+                background-clip: padding-box;
+                background-attachment: fixed, scroll;
+            }
+
+            #div_cores div:nth-child(24){
+                background-image: radial-gradient( closest-side at 20% 50%, hsla( 60deg, 100%, 50%, .5) 10%, hsla( 240deg, 100%, 50%, .5) 20%, hsla( 0deg, 100%, 50%, .5) 20%, green 70%);
+                background-clip: padding-box;
+                background-attachment: fixed, scroll;
+            }
+
+            #div_cores div:nth-child(25){
+                background-image: radial-gradient( farthest-side at 20% 50%, hsla( 60deg, 100%, 50%, .5) 10%, hsla( 240deg, 100%, 50%, .5) 20%, hsla( 0deg, 100%, 50%, .5) 20%, green 70%);
+                background-clip: padding-box;
+                background-attachment: fixed, scroll;
+            }
+
+            #div_cores div:nth-child(26){
+                background-image: radial-gradient( closest-corner at 20% 90%, hsla( 60deg, 100%, 50%, .5) 10%, hsla( 240deg, 100%, 50%, .5) 20%, hsla( 0deg, 100%, 50%, .5) 20%, green 70%);
+                background-clip: padding-box;
+                background-attachment: fixed, scroll;
+            }
+
+            #div_cores div:nth-child(27){
+                background-image: radial-gradient( farthest-corner at 20% 90%, hsla( 60deg, 100%, 50%, .5) 10%, hsla( 240deg, 100%, 50%, .5) 20%, hsla( 0deg, 100%, 50%, .5) 20%, green 70%);
+                background-clip: padding-box;
+                background-attachment: fixed, scroll;
+            }
+
+            #div_cores div:nth-child(28){
+                background-image: repeating-radial-gradient( farthest-corner at 20% 90%, hsla( 60deg, 100%, 50%, .5) 10%, hsla( 240deg, 100%, 50%, .5) 20%, hsla( 0deg, 100%, 50%, .5) 20%, green 70%);
+                background-clip: padding-box;
+                background-attachment: fixed, scroll;
+            }
+
+            #div_cores div:nth-child(29){
+                background-image: repeating-linear-gradient( hsla( 60deg, 100%, 50%, .5) 10%, hsla( 240deg, 100%, 50%, .5) 20%, hsla( 0deg, 100%, 50%, .5) 20%, green 70%);
+                background-clip: padding-box;
+                background-attachment: fixed, scroll;
+            }
+
+            #div_cores div:nth-child(30){
+                background-image: repeating-linear-gradient( hsla( 60deg, 100%, 50%, .5) 10%, hsla( 240deg, 100%, 50%, .5) 20%, hsla( 0deg, 100%, 50%, .5) 20%, green 70%);
+                background-clip: padding-box;
+            }
+
+            #div_cores div:nth-child(31){
+                background-image: repeating-radial-gradient( circle, red 0%, transparent, blue 33.33%), linear-gradient(blue, red);
+                background-clip: padding-box;
+                background-attachment: scroll, fixed;
+                color: white;
+            }
+            #div_cores div:nth-child(32){
+                background-image: repeating-radial-gradient( red 0%, transparent, blue 33.33%), linear-gradient(blue, red);
+                background-clip: padding-box;
+                background-attachment: scroll, fixed;
+                color: white;
+            }
+            #div_cores div:nth-child(33){
+                background-image: repeating-linear-gradient( red 0%, transparent, blue 33.33%), linear-gradient(blue, red);
+                background-clip: padding-box;
+                background-attachment: scroll, fixed;
+                color: white;
+            }
+            #div_cores div:nth-child(34){
+                background-image: repeating-linear-gradient( red 0%, transparent, blue 33.33%), linear-gradient(blue, red);
+                background-clip: padding-box;
+                color: white;
+            }
+
+            #div_cores div:nth-child(35){
+                background-image: radial-gradient( closest-corner at 50% 15% ,black, transparent), url(imagens/bg.jpg);
+                background-size: cover;
+                background-position: center -50px, center bottom;
+                background-clip: padding-box;
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura básica - Uso de Cores RGB, RGBA e HSL</h1>
+        <div id="div_cores">
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+            <div class="color"><p>Lorem ipsum ad senectus diam augue sagittis etiam id quisque placerat, eros rutrum mi ut congue metus integer curabitur laoreet mauris cursus, id ullamcorper sem tristique condimentum semper eros pulvinar auctor. </p></div>
+    </div>
+    </body>
+</html>
