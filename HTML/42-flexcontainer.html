@@ -1,0 +1,377 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            .flexbox{
+                height: 350px;
+                border: 1px solid red;
+                display: flex;
+            }
+
+            .flexbox div{
+                background: blueviolet;
+                width: 70px;
+                margin: 15px;
+            }
+
+            div{
+                margin-bottom: 1em ;
+            }
+
+            .flexbox:nth-child(2){
+                flex-direction: column;
+            }
+            .flexbox:nth-child(3){
+                flex-direction: row;
+                
+            }
+            .flexbox:nth-child(4){
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .flexbox:nth-child(5){
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .flexbox:nth-child(6){
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+            }
+            .flexbox:nth-child(7){
+                flex-direction: column-reverse;
+                flex-wrap: wrap;
+            }
+            .flexbox:nth-child(8){
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+            .flexbox:nth-child(9){
+                flex-direction: row;
+                flex-wrap: wrap-reverse;
+            }
+            .flexbox:nth-child(10){
+                flex-flow: column-reverse wrap; /*usa as funçoes de flex direction e wrap*/
+            }
+            .flexbox:nth-child(11){
+                flex-flow: row-reverse wrap; 
+                justify-content: center;
+                color:white;
+            }
+            .flexbox:nth-child(12){
+                flex-flow: column wrap; 
+                justify-content: baseline;
+                align-items: center;
+                color:white;
+            }
+            .flexbox:nth-child(13){
+                flex-flow: column wrap; 
+                justify-content: baseline;
+                align-items: center;
+                align-content: center;
+                color:white;
+            }
+            .flexbox:nth-child(14){
+                flex-flow: column wrap; 
+                align-items: center;
+                color:white;
+            }
+            .flexbox:nth-child(15){
+                flex-flow: row wrap; 
+                align-content: center;
+                color:white;
+            }
+
+            .flexbox:nth-child(16){
+                flex-flow: row wrap; 
+                align-content: space-around;
+                color:white;
+            }
+
+            .flexbox:nth-child(17){
+                flex-flow: row wrap; 
+                align-content: space-between;
+                color:white;
+            }
+            .flexbox:nth-child(18) div{
+                background: yellow;
+                flex-basis: 50px;
+            }
+            .flexbox:nth-child(18){
+                align-items: center;
+                justify-content: center;
+            }
+
+            .flexbox:nth-child(19) div{
+                background: yellow;
+                flex-basis: 100px;
+                height: 50px;
+            }
+            .flexbox:nth-child(19){
+                align-items: center;
+                justify-content: center;
+            }
+
+            .flexbox:nth-child(19) div:nth-child(2){
+                flex-grow: 3;
+            }
+            .flexbox:nth-child(19) div:nth-child(4){
+                flex-grow: 1;
+            }
+
+            .flexbox:nth-child(20) div{
+                background: yellow;
+                flex-basis: 100px;
+                height: 50px;
+            }
+            .flexbox:nth-child(20){
+                align-items: center;
+                justify-content: center;
+            }
+
+            .flexbox:nth-child(20) div:nth-child(2){
+                flex-shrink: 2; /*quando diminue*/
+            }
+            .flexbox:nth-child(20) div:nth-child(4){
+                flex-shrink: 2;
+            }
+
+            .flexbox:nth-child(21) div:nth-child(2){
+                flex: 2 2 100px;
+            }
+
+            .flexbox:nth-child(22) div:nth-child(2){
+                order: 3;
+            }
+            .flexbox:nth-child(22) div:nth-child(3){
+                order: 1;
+            }
+            .flexbox:nth-child(22) div:nth-child(4){
+                order: 2;
+            }
+            .flexbox:nth-child(22) div:nth-child(1){
+                order: 4;
+            }
+
+            .flexbox:nth-child(23){
+                align-items: flex-start;
+            }
+            .flexbox:nth-child(23) div:nth-child(1){
+                align-items: flex-start;
+                align-self: stretch;
+            }
+            .flexbox:nth-child(23) div:nth-child(2){
+                align-items: flex-start;
+                align-self: flex-end;
+            }
+            .flexbox:nth-child(23) div:nth-child(3){
+                align-items: flex-start;
+                align-self: center;
+            }
+            .flexbox:nth-child(23) div:nth-child(4){
+                align-items: flex-start;
+                align-self: baseline;
+            }
+            .flexbox:nth-child(23) div:nth-child(5){
+                align-items: flex-start;
+                align-self: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura básica - Display Flex</h1>
+        <div class="flexbox">
+            <div><p>div1</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>1</p></div>
+            <div><p>div2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>1</p></div>
+            <div><p>2</p></div>
+            <div><p>div3</p></div>
+            <div><p>4</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>1</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>div4</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>1</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>div5</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>1</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>Div6</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div7</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div8</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div9</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div10</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div11</p></div>
+            <div style="font-size: 44px;"><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div12</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div13</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div14</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div15</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div16</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div17</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div18</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div19</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div20</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div21</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div22</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+        <div class="flexbox">
+            <div><p>div23</p></div>
+            <div><p>2</p></div>
+            <div><p>3</p></div>
+            <div><p>4</p></div>
+            <div><p>5</p></div>
+            <div><p>6</p></div>
+            <div><p>7</p></div>
+        </div>
+    </body>
+</html>
