@@ -1,0 +1,118 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                background-image: linear-gradient(55deg, #fefefe, transparent);
+            }
+
+            .gridcontainer, .gridcontainer2, .gridcontainer3, .gridcontainer4, .gridcontainer5{
+                width: 300px;
+                background: #ccc;
+                border: 5px solid rgb(128, 126, 126);
+                margin: 2em;
+            }
+
+            .gridcontainer-item, .gridcontainer-item2, .gridcontainer-item3{
+                background: #999;
+                font-size: 2em;
+                font-family: sans-serif;
+                padding: 5px 15px;
+            }
+
+            .gridcontainer-item:nth-child(even), .gridcontainer-item2:nth-child(even), .gridcontainer-item3:nth-child(even){
+                background: #999;
+                color: white;
+            }
+            .gridcontainer-item:nth-child(odd), .gridcontainer-item2:nth-child(odd), .gridcontainer-item3:nth-child(odd){
+                background: #eee;
+            }
+
+            /*Edição do Grid*/
+            .gridcontainer{
+                display: grid;
+                grid-template-columns: 75px 75px 150px; /*tamanho das colunas*/
+                grid-template-rows: 100px 100px; /*tamanho das linhas*/
+            }
+
+            .gridcontainer2{
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                grid-template-rows: 100px 250px;
+            }
+
+            .gridcontainer3{
+                display: grid;
+                grid-template-columns: repeat(2, 75px) 100px;
+                grid-template-rows: 100px 250px;
+            }
+            .gridcontainer4{
+                display: grid;
+                grid-template-columns: repeat(2, 75px) 100px;
+                grid-template-rows: 100px 250px;
+                row-gap: 30px;
+                column-gap: 12px;
+            }
+
+            .gridcontainer5{
+                display: grid;
+                grid-template-columns: repeat(2, 75px) 100px;
+                grid-template-rows: 100px 250px;
+                gap: 30px 12px;
+                /*grid-row-gap: 30px;
+                grid-column-gap: 12px;*/
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura básica - Grid Layout</h1>
+        <div class="gridcontainer">
+            <div class="gridcontainer-item"><p>1</p></div>
+            <div class="gridcontainer-item"><p>2</p></div>
+            <div class="gridcontainer-item"><p>3</p></div>
+            <div class="gridcontainer-item"><p>4</p></div>
+            <div class="gridcontainer-item"><p>5</p></div>
+            <div class="gridcontainer-item"><p>6</p></div>
+        </div>
+        <div class="gridcontainer2">
+            <div class="gridcontainer-item2"><p>1</p></div>
+            <div class="gridcontainer-item2"><p>2</p></div>
+            <div class="gridcontainer-item2"><p>3</p></div>
+            <div class="gridcontainer-item2"><p>4</p></div>
+            <div class="gridcontainer-item2"><p>5</p></div>
+            <div class="gridcontainer-item2"><p>6</p></div>
+        </div>
+        <div class="gridcontainer3">
+            <div class="gridcontainer-item3"><p>1</p></div>
+            <div class="gridcontainer-item3"><p>2</p></div>
+            <div class="gridcontainer-item3"><p>3</p></div>
+            <div class="gridcontainer-item3"><p>4</p></div>
+            <div class="gridcontainer-item3"><p>5</p></div>
+            <div class="gridcontainer-item3"><p>6</p></div>
+        </div>
+
+        <div class="gridcontainer4">
+            <div class="gridcontainer-item3"><p>1</p></div>
+            <div class="gridcontainer-item3"><p>2</p></div>
+            <div class="gridcontainer-item3"><p>3</p></div>
+            <div class="gridcontainer-item3"><p>4</p></div>
+            <div class="gridcontainer-item3"><p>5</p></div>
+            <div class="gridcontainer-item3"><p>6</p></div>
+        </div>
+        <div class="gridcontainer5">
+            <div class="gridcontainer-item3"><p>1</p></div>
+            <div class="gridcontainer-item3"><p>2</p></div>
+            <div class="gridcontainer-item3"><p>3</p></div>
+            <div class="gridcontainer-item3"><p>4</p></div>
+            <div class="gridcontainer-item3"><p>5</p></div>
+            <div class="gridcontainer-item3"><p>6</p></div>
+        </div>
+    </body>
+</html>

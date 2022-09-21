@@ -4,11 +4,132 @@
     <head>
         <title>Pagina de exemplo de estrutura básica</title>
         <meta charset="utf-8">
-        <meta name="Author" content="Cídero">
+        <meta name="Author" content="Cícero">
         <meta name="description" content="Lista de documentos">
         <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                font-family: sans-serif;
+                background-image: linear-gradient( 65deg, rgb(110, 108, 108), transparent)
+            }
+            h1{
+                text-align: center;
+            }
+
+            p[class="h1p"]{
+                text-align: center;
+            }
+
+            .flexcontainer1{
+                display: flex;
+            }
+
+            .flexcontainer-card1{
+                border: 5px solid #fefefe;
+                margin: 1%;
+                width: 30%;
+                padding: .62em;
+            }
+
+            .flexcontainer2{
+                display: flex;
+            }
+
+            .flexcontainer-card2{
+                border: 5px solid #fefefe;
+                margin: 1%;
+                width: 30%;
+                padding: .62em;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .flexcontainer-card2 p{
+                flex-grow: 1
+            }
+
+            .flexcontainer3{
+                display: flex;
+            }
+
+            .flexcontainer-card3{
+                border: 5px solid #fefefe;
+                margin: 1%;
+                width: 30%;
+                padding: .62em;
+                display: flex;
+                flex-direction: column;
+                background-image: linear-gradient( 65deg, blueviolet, transparent);
+
+            }
+
+            .flexcontainer-card3 p{
+                flex-grow: 1
+            }
+
+            .flexcontainer-card3 button{
+                align-self: flex-end;
+            }
+
+        </style>
     </head>
     <body>
-        <h1>Estrutura básica</h1>
+        <h1>Estrutura básica - Display Flex</h1>
+        <p class="h1p">Acomodar ou distribuir elementos em tela</p>
+        <p class="h1p">Ajuda a centralizar na vertical</p>
+        <section class="flexcontainer1">
+            <article class="flexcontainer-card1">
+                <h3>Teste 1</h3>
+                <p>Lorem ipsum convallis arcu porta velit habitasse vestibulum</p>
+                <button>Enviar</button>
+            </article>
+            <article class="flexcontainer-card1">
+                <h3>Teste 2</h3>
+                <p>Lorem ipsum convallis arcu porta velit habitasse vestibulum amet inceptos mauris imperdiet, Lorem ipsum convallis arcu porta velit habitasse vestibulum amet inceptos mauris imperdiet</p>
+                <button>Enviar</button>
+            </article>
+            <article class="flexcontainer-card1">
+                <h3>Teste 3</h3>
+                <p>Lorem ipsum convallis arcu porta velit habitasse vestibulum amet inceptos mauris imperdiet</p>
+                <button>Enviar</button>
+            </article>
+
+        </section>
+        <section class="flexcontainer2">
+            <article class="flexcontainer-card2">
+                <h3>Teste 1</h3>
+                <p>Lorem ipsum convallis arcu porta velit habitasse vestibulum</p>
+                <button>Enviar</button>
+            </article>
+            <article class="flexcontainer-card2">
+                <h3>Teste 2</h3>
+                <p>Lorem ipsum convallis arcu porta velit habitasse vestibulum amet inceptos mauris imperdiet, Lorem ipsum convallis arcu porta velit habitasse vestibulum amet inceptos mauris imperdiet</p>
+                <button>Enviar</button>
+            </article>
+            <article class="flexcontainer-card2">
+                <h3>Teste 3</h3>
+                <p>Lorem ipsum convallis arcu porta velit habitasse vestibulum amet inceptos mauris imperdiet</p>
+                <button>Enviar</button>
+            </article>
+        </section>
+        <section class="flexcontainer3">
+            <article class="flexcontainer-card3">
+                <h3>Teste 1</h3>
+                <p>Lorem ipsum convallis arcu porta velit habitasse vestibulum</p>
+                <button>Enviar</button>
+            </article>
+            <article class="flexcontainer-card3">
+                <h3>Teste 2</h3>
+                <p>Lorem ipsum convallis arcu porta velit habitasse vestibulum amet inceptos mauris imperdiet, Lorem ipsum convallis arcu porta velit habitasse vestibulum amet inceptos mauris imperdiet</p>
+                <button>Enviar</button>
+            </article>
+            <article class="flexcontainer-card3">
+                <h3>Teste 3</h3>
+                <p>Lorem ipsum convallis arcu porta velit habitasse vestibulum amet inceptos mauris imperdiet</p>
+                <button>Enviar</button>
+            </article>
+
+        </section>
     </body>
 </html>
