@@ -20,18 +20,18 @@
                 margin: 2em;
             }
 
-            .gridcontainer-item, .gridcontainer-item2, .gridcontainer-item3{
+            .gridcontainer-item, .gridcontainer-item2, .gridcontainer-item3, .gridcontainer-item10, .gridcontainer-item7, .gridcontainer-item8, .gridcontainer-item9{
                 background: #999;
                 font-size: 2em;
                 font-family: sans-serif;
                 padding: 5px 15px;
             }
 
-            .gridcontainer-item:nth-child(even), .gridcontainer-item2:nth-child(even), .gridcontainer-item3:nth-child(even){
+            .gridcontainer-item:nth-child(even), .gridcontainer-item2:nth-child(even), .gridcontainer-item10:nth-child(even), .gridcontainer-item3:nth-child(even), .gridcontainer-item9:nth-child(even), .gridcontainer-item7:nth-child(even), .gridcontainer-item8:nth-child(even){
                 background: #999;
                 color: white;
             }
-            .gridcontainer-item:nth-child(odd), .gridcontainer-item2:nth-child(odd), .gridcontainer-item3:nth-child(odd){
+            .gridcontainer-item:nth-child(odd), .gridcontainer-item2:nth-child(odd), .gridcontainer-item10:nth-child(odd), .gridcontainer-item3:nth-child(odd), .gridcontainer-item9:nth-child(odd){
                 background: #eee;
             }
 
@@ -68,6 +68,85 @@
                 gap: 30px 12px;
                 /*grid-row-gap: 30px;
                 grid-column-gap: 12px;*/
+            }
+
+            .gridcontainer6{
+                display: grid;
+                grid-template-columns: 100px 1fr 2fr;
+                grid-template-rows: 100px;
+                gap: 1em 1em;
+            }
+            .gridcontainer7{
+                margin-top: 2em;
+                margin-bottom: 2em;
+                display: grid;
+                grid-template-columns: 100px 1fr 2fr;
+                grid-template-rows: 100px 100px 100px;
+                gap: 1em 1em;
+                background: rgb(220, 207, 233);
+            }
+
+            .gridcontainer-item7:nth-child(1){
+                background: red;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                grid-column-end: 1;
+                grid-column-start: -1;
+            }
+            .gridcontainer8{
+                margin-top: 2em;
+                margin-bottom: 2em;
+                display: grid;
+                grid-template-columns: 100px 1fr 2fr;
+                grid-template-rows: 100px 100px 100px;
+                gap: 1em 1em;
+                background: rgb(220, 207, 233);
+            }
+
+            .gridcontainer-item8:nth-child(1){
+                background: red;
+                grid-row: 2 / 3;
+                grid-column: 3 / -1;
+            }
+
+            .gridcontainer9{
+                margin-top: 2em;
+                margin-bottom: 2em;
+                display: grid;
+                grid-template-columns: 100px 1fr 2fr;
+                grid-template-rows: 100px 100px 100px;
+                gap: 1em 1em;
+                background: rgb(220, 207, 233);
+            }
+
+            .gridcontainer-item9:nth-child(1){
+                background: red;
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+            }
+            .gridcontainer10{
+                margin-top: 2em;
+                margin-bottom: 2em;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr ) 100px;
+                grid-template-rows: 100px 100px 100px;
+                gap: 1em 1em;
+                background: rgb(220, 207, 233);
+            }
+
+            .gridcontainer-item10:nth-child(1){
+                background: red;
+                grid-row: 1 / 2;
+                grid-column: 2 / -1;
+            }
+            .gridcontainer-item10:nth-child(2){
+                background: blueviolet;
+                grid-row: 1 / span 2;
+            }
+
+            .gridcontainer-item10:nth-child(6){
+                background: yellowgreen;
+                grid-column: 1 / -1;
             }
         </style>
     </head>
@@ -113,6 +192,46 @@
             <div class="gridcontainer-item3"><p>4</p></div>
             <div class="gridcontainer-item3"><p>5</p></div>
             <div class="gridcontainer-item3"><p>6</p></div>
+        </div>
+        <div class="gridcontainer6">
+            <div class="gridcontainer-item3"><p>1</p></div>
+            <div class="gridcontainer-item3"><p>2</p></div>
+            <div class="gridcontainer-item3"><p>3</p></div>
+            <div class="gridcontainer-item3"><p>4</p></div>
+            <div class="gridcontainer-item3"><p>5</p></div>
+            <div class="gridcontainer-item3"><p>6</p></div>
+        </div>
+        <div class="gridcontainer7">
+            <div class="gridcontainer-item7"><p>1</p></div>
+            <div class="gridcontainer-item7"><p>2</p></div>
+            <div class="gridcontainer-item7"><p>3</p></div>
+            <div class="gridcontainer-item7"><p>4</p></div>
+            <div class="gridcontainer-item7"><p>5</p></div>
+            <div class="gridcontainer-item7"><p>6</p></div>
+        </div>
+        <div class="gridcontainer8">
+            <div class="gridcontainer-item8"><p>1</p></div>
+            <div class="gridcontainer-item8"><p>2</p></div>
+            <div class="gridcontainer-item8"><p>3</p></div>
+            <div class="gridcontainer-item8"><p>4</p></div>
+            <div class="gridcontainer-item8"><p>5</p></div>
+            <div class="gridcontainer-item8"><p>6</p></div>
+        </div>
+        <div class="gridcontainer9">
+            <div class="gridcontainer-item9"><p>1</p></div>
+            <div class="gridcontainer-item9"><p>2</p></div>
+            <div class="gridcontainer-item9"><p>3</p></div>
+            <div class="gridcontainer-item9"><p>4</p></div>
+            <div class="gridcontainer-item9"><p>5</p></div>
+            <div class="gridcontainer-item9"><p>6</p></div>
+        </div>
+        <div class="gridcontainer10">
+            <div class="gridcontainer-item10"><p>1</p></div>
+            <div class="gridcontainer-item10"><p>2</p></div>
+            <div class="gridcontainer-item10"><p>3</p></div>
+            <div class="gridcontainer-item10"><p>4</p></div>
+            <div class="gridcontainer-item10"><p>5</p></div>
+            <div class="gridcontainer-item10"><p>6</p></div>
         </div>
     </body>
 </html>
