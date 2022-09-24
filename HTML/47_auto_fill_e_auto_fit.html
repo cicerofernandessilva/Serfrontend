@@ -1,0 +1,227 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            h1{
+                text-align: center;
+            }
+            .GridContainer{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+                grid-template-rows: [header-start]100px[header-end nav-start] 50px[nav-end main-start]  1fr [main-end footer-start]50px [footer-end];
+                gap: 10px;
+            }
+
+            .gridItem{
+                background-image: linear-gradient(58deg, blueviolet, transparent);
+                background:orange;
+                font-family: sans-serif;
+                color: white;
+            }
+                
+
+            .GridContainer2{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( auto-fill, minmax(100px, 1fr) );
+                grid-template-rows: [header-start]100px[header-end nav-start] 50px[nav-end main-start]  1fr [main-end footer-start]50px [footer-end];
+                gap: 10px;
+            }
+
+            .GridContainer3{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+                gap: 10px;
+            }
+
+            .GridContainer4{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( auto-fill, minmax(100px, 1fr) );
+                gap: 10px;
+            }
+
+            .GridContainer5{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+                grid-template-rows: 100px 100px 100px;
+                gap: 10px;
+            }
+
+            .GridContainer6{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( auto-fill, minmax(100px, 1fr) );
+                grid-template-rows: 100px 100px 100px;
+                gap: 10px;
+            }
+
+            .GridContainer6{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+                grid-auto-rows: 100px 50px ;
+                gap: 10px;
+            }
+
+            .GridContainer7{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( auto-fill, minmax(100px, 1fr) );
+                grid-auto-rows: 50px 150px;
+                gap: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura básica - Grid Layout - auto-fit</h1>
+        <div class="GridContainer">
+            <header class="header gridItem"><p>Header</p></header>
+            <nav class="nav gridItem"><p>nav</p></nav>
+            <aside class="aside gridItem"><p>aside</p></aside>
+            <main class="main gridItem"><p>main</p></main>
+            <footer class="footer gridItem"><p>footer</p></footer>
+
+        </div>
+        <hr>
+        <h1>Estrutura básica - Grid Layout - auto-fill</h1>
+        <div class="GridContainer2">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <footer class="footer2 gridItem"><p>footer</p></footer>
+
+        </div>
+        <hr>
+        <h1>Estrutura básica - Grid Layout - auto-fit</h1>
+        <div class="GridContainer3">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+        </div>
+
+        <hr>
+        <h1>Estrutura básica - Grid Layout - auto-fill</h1>
+        <div class="GridContainer4">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+        </div>
+        <h1>Estrutura básica - Grid Layout - auto-fill</h1>
+        <div class="GridContainer4">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+        </div>
+        <hr>
+        <h1>Estrutura básica - Grid Layout - auto-fill</h1>
+        <div class="GridContainer4">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+        </div>
+        <hr>
+        <h1>Estrutura básica - Grid Layout - auto-fit</h1>
+        <div class="GridContainer5">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+        </div>
+        <hr>
+        <h1>Estrutura básica - Grid Layout - auto-fill</h1>
+        <div class="GridContainer5">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+        </div>
+        <h1>Estrutura básica - Grid Layout - auto-fit com outo-row</h1>
+        <div class="GridContainer6">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+        </div>
+        <hr>
+        <h1>Estrutura básica - Grid Layout - auto-fill com outo-row</h1>
+        <div class="GridContainer7">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+        </div>
+    </body>
+</html>

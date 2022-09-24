@@ -1,0 +1,129 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            h1{
+                text-align: center;
+            }
+            .GridContainer{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( 3, [col-start] 1fr [col-end ] );
+                grid-template-rows: [header-start]100px[header-end nav-start] 50px[nav-end main-start]  1fr [main-end footer-start]50px [footer-end];
+                gap: 20px;
+            }
+
+            .gridItem{
+                background-image: linear-gradient(58deg, blueviolet, transparent);
+                background:orange;
+                padding: 1em;
+                font-family: sans-serif;
+                color: white;
+            }
+            
+            .header{
+                grid-column: col-start 1/ span 3;
+                grid-row: header;
+                background: blueviolet;
+            }
+
+            .nav{
+                grid-column: col-start 1/ span 2;
+                grid-row: nav;
+                background: blue;
+            }
+
+            .aside{
+                grid-row: nav-start / footer-end;
+                grid-column: col-start 3/ span 1;
+                background: rgb(74, 110, 20);
+            }
+
+            .main{
+                grid-row: main;
+                grid-column: col-start 1/ span 2;
+                height: 400px ;
+            }
+
+            .footer{
+                grid-row: footer;
+                grid-column: col-start 1 / span 3;
+                background-color: rgba(255, 0, 0, .5);
+            }
+           
+                
+
+            .GridContainer2{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+                display: grid;
+                grid-template-columns: repeat( 3, [col-start] 1fr [col-end ] );
+                grid-template-rows: [header-start]100px[header-end nav-start] 50px[nav-end main-start]  1fr [main-end footer-start]50px [footer-end];
+                gap: 20px;
+            }
+            
+            .header2{
+                grid-column: col-start 1/ col-end 3;
+                grid-row: header;
+                background: blueviolet;
+            }
+
+            .nav2{
+                grid-column: col-start 1/ col-start 3;
+                grid-row: nav;
+                background: blue;
+            }
+
+            .aside2{
+                grid-row: nav-start / footer-end;
+                grid-column: col-start 3/ col-end 3;
+                background: rgb(74, 110, 20);
+            }
+
+            .main2{
+                grid-row: main;
+                grid-column: col-start 1/ col-end 2;
+                height: 400px ;
+            }
+
+            .footer2{
+                grid-row: footer;
+                grid-column: col-start 1 / col-end 3;
+                background-color: rgba(255, 0, 0, .5);
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura básica - Grid Layout - Nomeadas 1</h1>
+        <div class="GridContainer">
+            <header class="header gridItem"><p>Header</p></header>
+            <nav class="nav gridItem"><p>nav</p></nav>
+            <aside class="aside gridItem"><p>aside</p></aside>
+            <main class="main gridItem"><p>main</p></main>
+            <footer class="footer gridItem"><p>footer</p></footer>
+
+        </div>
+        <hr>
+        <h1>Estrutura básica - Grid Layout - Nomeadas 2</h1>
+        <div class="GridContainer2">
+            <header class="header2 gridItem"><p>Header</p></header>
+            <nav class="nav2 gridItem"><p>nav</p></nav>
+            <aside class="aside2 gridItem"><p>aside</p></aside>
+            <main class="main2 gridItem"><p>main</p></main>
+            <footer class="footer2 gridItem"><p>footer</p></footer>
+
+        </div>
+    </body>
+</html>
