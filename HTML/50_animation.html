@@ -1,0 +1,338 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+
+        <style>
+            @keyframes move {
+                0%{
+                    transform: translateX(0);
+                }
+                100%{
+                    transform: translateX(500px);
+                }
+            }
+
+            @keyframes move_cor {
+                0%{
+                    transform: translateX(0);
+                    background: gray;
+                }
+                100%{
+                    transform: translateX(500px);
+                    background: yellowgreen;
+                }
+            }
+
+            @keyframes move_cor-alt {
+                0%{
+                    transform: translateX(0);
+                    background: gray;
+                }
+                25%{
+                    background: green;
+                }
+                50%{
+                    background: orange;
+                }
+                75%{
+                    background: blue;
+                }
+                85%{
+                    background: blueviolet;
+                }
+                
+                100%{
+                    transform: translateX(500px);
+                    background: yellowgreen;
+                }
+            }
+            @keyframes move_cor-alt-altu {
+                0%{
+                    transform: translateX(0);
+                    background: gray;
+                }
+                25%{
+                    background: green;
+                    height: 60px;
+                }
+                50%{
+                    background: orange;
+                    height: 70px;
+                }
+                75%{
+                    background: blue;
+                    height: 80px;
+                }
+                85%{
+                    background: blueviolet;
+                    height: 30px;
+                }
+                
+                100%{
+                    transform: translateX(500px);
+                    background: yellowgreen;
+                }
+            }
+
+            
+
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(12, 50px);
+                column-gap: 50px;
+                row-gap: 30px;
+                background: #eee;
+            }
+
+            .animation div{
+                width: 150px;
+                height: 50px;
+                border: 3px solid blueviolet;
+            }
+
+            .animation div:nth-child(1){
+                animation: move 2s;
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+
+            .animation div:nth-child(2){
+                /* mesmo que abaixo "animation: move 2s linear ;" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: linear ;
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+
+            .animation div:nth-child(3){
+                /* mesmo que abaixo "animation: move 2s ease;" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: ease;
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+            .animation div:nth-child(4){
+                /* mesmo que abaixo "animation: move 2s ease-in;" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: ease-in;
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+
+            .animation div:nth-child(5){
+                /* mesmo que abaixo "animation: move 2s ease-out;" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: ease-out;
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+            .animation div:nth-child(6){
+                /* mesmo que abaixo "animation: move 2s ease-in-out;" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+
+            .animation div:nth-child(7){
+                /* mesmo que abaixo "animation: move 2s cubic-bezier(0.42, 0.0, 1.0, 1.0);" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: cubic-bezier(0.42, 0.0, 1.0, 1.0);
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+
+            .animation div:nth-child(8){
+                /* mesmo que abaixo "animation: move 2s linear(1, -0.5, 0);" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: linear(1, -0.5, 0);
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+
+            .animation div:nth-child(9){
+                /* mesmo que abaixo "animation: move 2s steps(5, end);" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: steps(5, end);
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+
+            .animation div:nth-child(10){
+                /* mesmo que abaixo "animation: move 2s steps(3, start);" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: steps(3, start);
+                background-image: linear-gradient(45deg, blue, transparent);
+            }
+
+            .animation2 div{
+                width: 150px;
+                height: 50px;
+                border: 3px solid red;
+            }
+
+            .animation2 div:nth-child(1){
+                /* mesmo que abaixo "animation: move 2s;" */
+                animation-name: move;
+                animation-duration: 2s;
+                animation-timing-function: steps(3, end); 
+                background-image: linear-gradient(45deg, red, transparent);
+            }
+
+            .animation2 div:nth-child(2){
+                animation: move 2s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite; 
+                animation-direction: alternate;
+                /*mesmo que*/
+                animation: move 2s ease-in-out infinite alternate;
+                background-image: linear-gradient(45deg, red, transparent);
+
+            }
+            .animation2 div:nth-child(3){
+                animation: move 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 1.5s;
+                animation-iteration-count: infinite; 
+                animation-direction: alternate;
+                /*mesmo que*/
+                animation: move 2s ease-in-out 1.5s infinite alternate;
+                background-image: linear-gradient(45deg, red, transparent);
+
+            }
+            .animation2 div:nth-child(4){
+                animation: move_cor 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 1.6s;
+                animation-iteration-count: 2; 
+                animation-direction: alternate;
+                animation-fill-mode: backwards; /*antes de iniciar animação aplica propriedades*/
+                background-image: linear-gradient(45deg, red, transparent);
+
+            }
+
+            .animation2 div:nth-child(5){
+                animation: move_cor 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 1.0s;
+                animation-iteration-count: 2; 
+                animation-direction: alternate;
+                animation-fill-mode: both;
+                background-image: linear-gradient(45deg, red, transparent);
+
+            }
+
+            .animation2 div:nth-child(6){
+                animation: move_cor 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: .5s;
+                animation-iteration-count: 2; 
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                background-image: linear-gradient(45deg, red, transparent);
+
+            }
+            .animation2 div:nth-child(7){
+                animation: move_cor 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: .5s;
+                animation-iteration-count: 2; 
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                animation-play-state: running;
+                background-image: linear-gradient(45deg, red, transparent);
+
+
+            }
+            .animation2 div:nth-child(8){
+                animation: move_cor 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: .5s;
+                animation-iteration-count: 3; 
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                animation-play-state: paused;
+                background-image: linear-gradient(45deg, red, transparent);
+
+            }
+
+            .animation2 div:nth-child(8):hover{
+                animation-play-state: running;
+            }
+            .animation2 div:nth-child(7):hover{
+                animation-play-state: paused;
+            }
+            .animation2 div:nth-child(9){
+                animation: move_cor-alt 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: .5s;
+                animation-iteration-count: infinite; 
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                animation-play-state: running;
+                background-image: linear-gradient(45deg, red, transparent);
+
+            }
+
+            .animation2 div:nth-child(9):hover{
+                animation-play-state: paused;
+            }
+
+            .animation2 div:nth-child(10){
+                animation: move_cor-alt-altu 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 1.5s;
+                animation-iteration-count: infinite; 
+                animation-direction: alternate;
+                animation-fill-mode: forwards;
+                animation-play-state: running;
+                background-image: linear-gradient(45deg, red, transparent);
+
+            }
+
+            .animation2 div:nth-child(10):hover{
+                animation-play-state: paused;
+            }
+            
+
+        </style>
+    <body>
+        <h1>Estrutura básica - Animações</h1>
+        <p><code>animation: nome duration timing-function delay iteration-count direction fill-mode play-state</code></p>
+        <div class="grid">
+            <div class="animation">
+                <div><p>1</p></div>
+                <div><p>2</p></div>
+                <div><p>3</p></div>
+                <div><p>4</p></div>
+                <div><p>5</p></div>
+                <div><p>6</p></div>
+                <div><p>7</p></div>
+                <div><p>8</p></div>
+                <div><p>9</p></div>
+                <div><p>10</p></div>
+            </div>
+            <div class="animation2">
+                <div><p>1</p></div>
+                <div><p>2</p></div>
+                <div><p>3</p></div>
+                <div><p>4</p></div>
+                <div><p>5</p></div>
+                <div><p>6</p></div>
+                <div><p>7</p></div>
+                <div><p>8</p></div>
+                <div><p>9</p></div>
+                <div><p>10</p></div>
+            </div>
+
+        </div>
+    </body>
+</html>

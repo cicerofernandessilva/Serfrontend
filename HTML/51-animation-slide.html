@@ -1,0 +1,201 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            @keyframes slide {
+                0%, 22%, 100%{
+                    transform: translateY(0);
+                }
+                25%, 47%{
+                    transform: translateY(-70vh);
+                }
+                50%, 72%{
+                    transform: translateY(-140vh);
+                }
+                75%, 97%{
+                    transform: translateY(-210vh);
+                }
+                
+            }
+            @keyframes slide2 {
+                0%{
+                    transform: translateX(0);
+                }
+                22%{
+                    transform: translateX(0);
+                }
+                25%{
+                    transform: translateX(-80vw);
+                }
+                47%{
+                    transform: translateX(-80vw);
+                }
+                50%{
+                    transform: translateX(-160vw);
+                }
+                72%{
+                    transform: translateX(-160vw);
+                }
+                75%{
+                    transform: translateX(-240vw);
+                }
+                97%{
+                    transform: translateX(-240vw);
+                }
+                100%{
+                    transform: translateX(0);
+                }
+                
+            }
+
+            @keyframes slide3 {
+                0%{
+                    transform: translateX(0);
+                }
+                22%{
+                    transform: translateX(0);
+                }
+                25%{
+                    transform: translateX(-80vw);
+                }
+                47%{
+                    transform: translateX(-80vw);
+                }
+                50%{
+                    transform: translateX(-160vw);
+                }
+                72%{
+                    transform: translateX(-160vw);
+                }
+                75%{
+                    transform: translateX(-240vw);
+                }
+                97%{
+                    transform: translateX(-240vw);
+                }
+                100%{
+                    transform: translateX(0);
+                }
+                
+            }
+
+            body{
+                font-family: sans-serif;
+                color: white;
+                background: rgb(43, 41, 41);
+                text-align: center;
+            }
+
+            .div-slide{
+                width: 80vw;
+                height: 70vh;
+                border: 10px solid white;
+                border-radius: 5px;
+                box-shadow: 0 0 10px black;
+                margin-left: 10vw;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+            .div-slide-int{
+                width: 100%;
+                animation: slide 15s infinite cubic-bezier(.4,-0.52,.47,1.49);
+            }
+            .div-slide-int img{
+                display: block;
+                height: 70vh;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .div-slide2{
+                width: 80vw;
+                height: 50vh;
+                border: 10px solid white;
+                border-radius: 5px;
+                box-shadow: 0 0 10px black;
+                margin-left: 10vw;
+                overflow: hidden;
+                box-sizing: border-box;
+
+            }
+            .div-slide-int2{
+                width: 100%;
+                animation: slide2 15s infinite cubic-bezier(.4,-0.52,.47,1.49);
+                display: grid;
+                grid-template-columns: repeat(4, 80vw);
+                grid-template-rows: 50vh;
+
+            }
+            .div-slide-int2 img{
+                display:block;
+                height: 50vh;
+                width: 100%;
+            }
+            .div-slide3{
+                width: 80vw;
+                height: 50vh;
+                border: 10px solid white;
+                border-radius: 5px;
+                box-shadow: 0 0 10px black;
+                margin-left: 10vw;
+                overflow: hidden;
+                box-sizing: border-box;
+
+            }
+            .div-slide-int3{
+                width: 100%;
+                animation: slide3 15s infinite cubic-bezier(.4,-0.52,.47,1.49);
+                display: grid;
+                grid-template-columns: repeat(4, 80vw);
+                grid-template-rows: 50vh;
+
+            }
+            .div-slide-int3 img{
+                display:block;
+                height: 50vh;
+                width: 100%;
+            }
+
+
+
+            
+
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura básica - animation - Slideshow</h1>
+        <div class="div-slide">
+            <div class="div-slide-int">
+                <img src="imagens/slide1.jpg" alt="floresta">
+                <img src="imagens/slide2.jpg" alt="Neve">
+                <img src="imagens/slide3.jpg" alt="dog 1">
+                <img src="imagens/slide4.jpg" alt="dog 2">
+            </div>
+        </div>
+        <hr>
+        <div class="div-slide2">
+            <div class="div-slide-int2">
+                <img src="imagens/slide1.jpg" alt="floresta">
+                <img src="imagens/slide2.jpg" alt="Neve">
+                <img src="imagens/slide3.jpg" alt="dog 1">
+                <img src="imagens/slide4.jpg" alt="dog 2">
+            </div>
+        </div>
+        <hr>
+        <div class="div-slide3">
+            <div class="div-slide-int3">
+                <img src="imagens/slide1.jpg" alt="floresta">
+                <img src="imagens/slide2.jpg" alt="Neve">
+                <img src="imagens/slide3.jpg" alt="dog 1">
+                <img src="imagens/slide4.jpg" alt="dog 2">
+            </div>
+        </div>
+    </body>
+</html>
