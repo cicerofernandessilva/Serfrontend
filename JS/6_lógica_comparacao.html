@@ -1,0 +1,40 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação</h1>
+        <script>
+            alert("Média maior que 5");
+            //pedir para o usuario digitar um numero
+            var n1 = prompt("Digite a primeira nota");
+            //converter em numero inteiro
+            n1 = parseFloat(n1);
+            
+            //pedir para o usuario digitar outro numero
+            var n2 = prompt("Digite a segunda nota");
+            //converter em numero inteiro
+            n2 = parseFloat(n2);
+            //calcular media
+            var media =  (n1 + n2)/2;
+            //boleano
+            var bol =  media > 5;
+            //mostrar do resultado
+            alert(`A média entre ${n1} e ${n2} é maior que 5? ${bol}!`);                                           
+        </script>
+    </body>
+</html>

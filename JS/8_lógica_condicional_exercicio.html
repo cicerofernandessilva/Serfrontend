@@ -1,0 +1,56 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação</h1>
+        <script>
+            alert("Jogo da sosorte");
+            //pedir para o usuario digitar um numero
+            var n1 = prompt("Jogador 1, digite o primeira número");
+            //converter em numero inteiro
+            n1 = parseFloat(n1);
+            
+            //pedir para o usuario digitar outro numero
+            var n2 = prompt("Jogador 2, digite o segundo número");
+            //converter em numero inteiro
+            n2 = parseFloat(n2);
+            
+            //mostrar do resultado
+            if((n1 === n2 )){
+                alert(`Parabéns! Foi empate`);  // empate                                       
+            } else{ 
+                // sorteio com resultado 1
+                //sortear entre 0 e 1
+                var sorteio = parseInt(Math.random()* 2);
+                if(sorteio === 1 ){
+                    if (n1 > n2){
+                        alert(`Parabéns! Jogador 1 ganhou! n1 > n2, ${n1}, ${sorteio}`); // p1 maior que p2 
+                    } else {
+                        alert(`Parabéns! Jogador 2 ganhou! n2 > n1, ${n2}, ${sorteio}`); // p2 maior que p1
+                    }
+                } else { // sorteio com resultado 0
+                    if (n1 < n2){
+                        alert(`Parabéns! Jogador 1 ganhou! n1 < n2, ${n1}, ${sorteio}`); // p1 menor que p2
+                    }else{
+                        alert(`Parabéns! Jogador 2 ganhou! n2 < n1, ${n2}, ${sorteio}`); // p2 menor que p1
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

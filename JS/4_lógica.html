@@ -1,0 +1,38 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação</h1>
+        <script>
+            alert("Média de dois números");
+            //pedir para o usuario digitar um numero
+            var n1 = prompt("Digite um número");
+            //converter em numero inteiro
+            n1 = parseFloat(n1);
+            
+            //pedir para o usuario digitar outro numero
+            var n2 = prompt("Digite outro número");
+            //converter em numero inteiro
+            n2 = parseFloat(n2);
+            //calcular média
+            var media = ( n1 + n2)/2;
+            //mostrar a soma concatenando com o texto "a soma é: ..."
+            alert(`A média entre os dois valores é ${media}!`);                       
+        </script>
+    </body>
+</html>
