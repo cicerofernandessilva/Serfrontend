@@ -1,0 +1,39 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - While - Multiplicar 1 até 1000</h1>
+        <script>
+            alert("Digité um número");
+            //pedir para o usuario digitar um numero
+            var n1 = prompt("Digite o número");
+            //converter em numero inteiro
+            n1 = parseFloat(n1);
+            //multiplicado
+            var indice = 1
+            //repetir multiplicação até mil
+            while(indice <= 1000){ // laço while
+                document.write(`${n1} X ${indice} é iguar a ${n1*indice}! <br>`); // o <br> causa a quebra de linha
+                indice = indice + 1; // sair do loop
+            }
+            document.write(`Saiu do loop`) // mensagem de saída do loop
+            
+            
+        </script>
+    </body>
+</html>

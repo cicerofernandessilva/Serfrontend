@@ -31,24 +31,18 @@
             n2 = parseFloat(n2);
             
             //mostrar do resultado
-            if((n1 === n2 )){
+            if(n1 === n2 ){
                 alert(`Parabéns! Foi empate`);  // empate                                       
             } else{ 
                 //sortear entre 0 e 1
                 var sorteio = parseInt(Math.random()* 2);
                 // sorteio com resultado 1
-                if(sorteio === 1 ){
-                    if (n1 > n2){
-                        alert(`Parabéns! Jogador 1 ganhou! n1 > n2, ${n1}, ${sorteio}`); // p1 maior que p2 
-                    } else {
-                        alert(`Parabéns! Jogador 2 ganhou! n2 > n1, ${n2}, ${sorteio}`); // p2 maior que p1
-                    }
-                } else { // sorteio com resultado 0
-                    if (n1 < n2){
-                        alert(`Parabéns! Jogador 1 ganhou! n1 < n2, ${n1}, ${sorteio}`); // p1 menor que p2
-                    }else{
-                        alert(`Parabéns! Jogador 2 ganhou! n2 < n1, ${n2}, ${sorteio}`); // p2 menor que p1
-                    }
+                if((sorteio === 1 && n1 > n2 )||(sorteio === 0 && n1 < n2 ) ){
+                        alert(`Parabéns! Jogador 1 ganhou!`); // p1 ganha
+                } else if ((sorteio === 1 && n2 > n1 )||(sorteio === 0 && n2 < n1 ) ){ // p2 ganha
+                        alert(`Parabéns! Jogador 2 ganhou!`);
+                } else {
+                    alert("Algo deu errado!");
                 }
             }
         </script>

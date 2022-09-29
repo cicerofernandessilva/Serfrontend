@@ -1,0 +1,54 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação</h1>
+        <script>
+            alert("Digité um número de 1 a 6");
+            //pedir para o usuario digitar um numero
+            var n1 = prompt("Digite o número");
+            //converter em numero inteiro
+            n1 = parseFloat(n1);
+
+            switch(n1){
+                case 1:
+                    alert("Legal!");
+                    break;
+                case 2:
+                    alert("Muito bem!");
+                    break;
+                case 3:
+                    alert("Ótimo!");
+                    break;
+                case 4:
+                    alert("Excelente!");
+                    break;
+                case 5:
+                    alert("Extraordinário!");
+                    break;
+                case 6:
+                    alert("Agora acabou!");
+                    break;
+                default:
+                    alert("Digite um número entre 1 e 6")
+            }
+            
+            
+        </script>
+    </body>
+</html>

@@ -29,26 +29,28 @@
             var n2 = prompt("Jogador 2, digite o segundo número");
             //converter em numero inteiro
             n2 = parseFloat(n2);
+            //sortear entre 0 e 1
+            var sorteio = parseInt(Math.random()* 2);
             
             //mostrar do resultado
-            if((n1 === n2 )){
+            if(n1 === n2 ){
                 alert(`Parabéns! Foi empate`);  // empate                                       
             } else{ 
-                //sortear entre 0 e 1
-                var sorteio = parseInt(Math.random()* 2);
                 // sorteio com resultado 1
                 if(sorteio === 1 ){
                     if (n1 > n2){
-                        alert(`Parabéns! Jogador 1 ganhou! n1 > n2, ${n1}, ${sorteio}`); // p1 maior que p2 
+                        alert(`Parabéns! Jogador 1 ganhou! Resultado n1 > n2, valor do jogador 1 ${n1}, número sorteado ${sorteio}`); // p1 maior que p2 
                     } else {
-                        alert(`Parabéns! Jogador 2 ganhou! n2 > n1, ${n2}, ${sorteio}`); // p2 maior que p1
+                        alert(`Parabéns! Jogador 2 ganhou! Resultado n2 > n1, valor do jogador 1 ${n2}, número sorteado ${sorteio}`); // p2 maior que p1
                     }
-                } else { // sorteio com resultado 0
+                } else if (sorteio === 0 ){ // sorteio com resultado 0
                     if (n1 < n2){
-                        alert(`Parabéns! Jogador 1 ganhou! n1 < n2, ${n1}, ${sorteio}`); // p1 menor que p2
+                        alert(`Parabéns! Jogador 1 ganhou! Resultado n1 < n2, valor do jogador 1 ${n1}, número sorteado ${sorteio}`); // p1 menor que p2
                     }else{
-                        alert(`Parabéns! Jogador 2 ganhou! n2 < n1, ${n2}, ${sorteio}`); // p2 menor que p1
+                        alert(`Parabéns! Jogador 2 ganhou!Resultado n2 < n1, valor do jogador 1 ${n2}, número sorteado ${sorteio}`); // p2 menor que p1
                     }
+                } else {
+                    alert("Algo deu errado!");
                 }
             }
         </script>
