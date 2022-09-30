@@ -1,0 +1,39 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - While - Multiplicar 1 até 1000</h1>
+        <script>
+            //Anos multiplos de 4 
+            var n1 = 1000
+            //repetir multiplicação
+            while(n1 <= 2022){ // laço while
+                if(n1 % 4 === 0 && n1 % 100 !== 0 || n1 % 400 === 0 ){
+                    document.write(`Ano ${n1}! <br>`); // o <br> causa a quebra de linha
+                } else {
+                    document.write(`Ano ${n1} não é bissesxto! <br>`)
+                }
+                //n1 = n1 + 4; // regra para sair do loop
+                n1 += 4; // modo reduzido
+            }
+            document.write(`Saiu do loop`) // mensagem de saída do loop
+            
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Funções</h1>
+        <div id="javascript"></div>
+        <script>
+            var javascript = document.querySelector('#javascript'); // faz com que o id javascript escreva os conteudos descritos no javascript
+
+            var mens = ''; //mens recebe os dados do loop para escrever no html
+            
+            for( var i = 0; i < 1001; i++){
+                mens += 'i: ' + i +'<br>'; // o loop acrescenta valor ao mens até i ser 1000
+            }
+            javascript.innerHTML = mens; // atribui o valor de mens ao id javascript
+            
+            
+        </script>
+    </body>
+</html>
