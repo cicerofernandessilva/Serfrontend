@@ -1,0 +1,52 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Funções</h1>
+        <button onclick="mostrarTabuada()">Chamar Tabuada</button>
+        <button onclick="limparTabuada()">Limpar Tabuada</button>
+        <div id="javascript"></div>
+        <script>
+            function mostrarTabuada(){
+                var n = prompt("Digite um número");
+                limparTabuada();
+                n = parseFloat(n);
+                var ind = 1;
+                while(ind <= 1000){
+                    mens += `${n}X ${ind} = ${n*ind} <br>`;
+                    ind++;
+                }
+
+                javascript.innerHTML = mens; // atribui o valor de mens ao id javascript
+
+            }
+            function limparTabuada(){ // limpar "mens"
+                mens = '';
+                javascript.innerHTML = mens; // atribui o valor de mens ao id javascript
+            }
+
+            
+            var javascript = document.querySelector('#javascript'); // faz com que o id javascript escreva os conteudos descritos no javascript
+
+            var mens = ''; //mens recebe os dados do loop para escrever no html
+            javascript.innerHTML = mens; // atribui o valor de mens ao id javascript
+            
+            
+        </script>
+    </body>
+</html>

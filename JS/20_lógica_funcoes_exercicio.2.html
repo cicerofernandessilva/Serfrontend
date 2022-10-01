@@ -1,0 +1,69 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Funções</h1>
+        <button onclick="somar()">+</button>
+        <button onclick="subtrair()">-</button>
+        <button onclick="multiplicar()">*</button>
+        <button onclick="divifir()">/</button>
+        <div id="javascript"></div>
+        <script>
+            var n = prompt("Digite um número");
+            n = parseFloat(n);
+            function out(){
+                var javascript = document.querySelector('#javascript'); // faz com que o id javascript escreva os conteudos descritos no javascript
+                javascript.innerHTML = n; // atribui o valor de n ao id javascript
+            }
+            out();
+            function somar(){
+                var n1 = prompt("Digite um número");
+                n1 = parseFloat(n1);
+                n += n1;
+
+                out(); // atribui o valor de n ao id javascript
+            }
+            function subtrair(){
+                var n1 = prompt("Digite um número");
+                n1 = parseFloat(n1);
+                n -= n1;
+
+                out(); // atribui o valor de n ao id javascript
+                
+            }
+            function multiplicar(){
+                var n1 = prompt("Digite um número");
+                n1 = parseFloat(n1);
+                n *= n1;
+
+                out(); // atribui o valor de n ao id javascript
+                
+            }
+            function divifir(){
+                var n1 = prompt("Digite um número");
+                n1 = parseFloat(n1);
+                n /= n1; // modo simplificado de n = n / n1
+
+                out(); // atribui o valor de n ao id javascript
+            }
+
+            
+            
+        </script>
+    </body>
+</html>
