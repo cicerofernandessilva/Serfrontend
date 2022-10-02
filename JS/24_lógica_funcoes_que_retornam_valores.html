@@ -1,0 +1,51 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Funções</h1>
+        <button onclick="areaAlert()">Mostrar Área Total - Alert</button>
+        <button onclick="areaOut()">Mostrar Área Total - Na Div</button>
+        <div id="javascript"></div>
+        <script>
+
+            function areaAlert(){
+                var l = prompt("Digite o número da Largura");
+                l = parseFloat(l);
+                var a = prompt("Digite o número da altura");
+                a = parseFloat(a);
+                var area = calcular(l, a);
+                alert(`Area total é ${area} m²`);
+            }
+            function areaOut(){
+                var l = prompt("Digite o número da Largura");
+                l = parseFloat(l);
+                var a = prompt("Digite o número da altura");
+                a = parseFloat(a);
+                var area = calcular(l, a);
+                document.querySelector('#javascript').innerHTML = `Area total é ${area}m²`;
+            }
+
+            function calcular(l, a){
+                return l * a;
+            }
+
+            
+            
+        </script>
+    </body>
+</html>
