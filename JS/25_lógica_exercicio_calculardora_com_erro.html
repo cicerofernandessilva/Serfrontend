@@ -1,0 +1,79 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Funções</h1>
+        <button onclick="initCalc('+')">+</button>
+        <button onclick="initCalc('-')">-</button>
+        <button onclick="initCalc('*')">*</button>
+        <button onclick="initCalc('/')">/</button>
+        <div id="javascript"></div>
+        <script>
+            var n2 = prompt("Digite um número");
+            n2 = parseFloat(n2);
+            out(n2);
+            function out(mensagem){ // responsavel por escrever na div
+                var javascript = document.querySelector('#javascript'); // faz com que o id javascript escreva os conteudos descritos no javascript
+                javascript.innerHTML = mensagem; // atribui o valor de n ao id javascript
+            }
+            function initCalc(simb){ // responsavel por pedir número e interagir com outras funçoes para retorno do calculo
+                var n1 = document.querySelector('#javascript').textContent; // testo descrito na div
+                n1 = parseFloat(n1);
+                
+                var n2 = prompt("Digite um número");
+                n2 = parseFloat(n2);
+                try{ 
+                    var msg = calcular(simb, n1, n2);
+                } catch(e){
+                    console.log(e);
+                    return;
+                }
+                out(msg);
+
+            }
+
+            function calcular(simb, n1, n2){
+                var nuCalc = null; // vai armazenar o calculo
+
+                if((simb !=='+') && (simb !=='-') && (simb !=='*') && (simb !=='/')){
+                    throw new Error('Algum erro aconteceu no simbolo!');
+                }
+
+                if(isNaN(n1)||isNaN(n2)){
+                    throw new Error('Letras não são calculadas');
+                }
+
+                switch(simb){
+                    case '+':
+                        nuCalc = n1 + n2;
+                        break;
+                    case '-':
+                        nuCalc = n1 - n2;
+                        break;
+                    case '*':
+                        nuCalc = n1 * n2;
+                        break;
+                    case '/':
+                    nuCalc = n1 / n2;
+                }
+                
+                return nuCalc; // devolve o resultado do calculo
+            }          
+        </script>
+    </body>
+</html>

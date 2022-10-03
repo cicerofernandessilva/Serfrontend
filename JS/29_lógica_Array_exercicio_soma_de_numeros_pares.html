@@ -1,0 +1,29 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+    <body>
+        <h1>Lógica de Programação - Array</h1>
+        <div id="out"></div>
+        <script>
+            var num = new Array( 25, 30, 45, 28, 0, 12, 78, 64);
+            var out = document.querySelector("#out");
+
+            var soma = 0; // recebe o valor da soma
+            for( var i = 0; i < num.length; i++){ // .length deine a quantidade de elementos da array
+                if(num[i] % 2 === 0){ // verifica se o valor é par
+                    soma += num[i]; //soma os valores
+                }
+            }
+
+            out.innerHTML = soma;
+            //alert(`Bem Vindo, hoje é ${Dias[hoje.getDay()]}`)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+    <body>
+        <h1>Lógica de Programação - Array</h1>
+        <h2>Par</h2>
+        <div id="out"></div>
+        <hr>
+        <h2>Impar</h2>
+        <div id="out2"></div>
+        <script>
+            var num = new Array( 25, 30, 45, 28, 0, 12, 78, 64);
+            var out = document.querySelector("#out");
+            var out2 = document.querySelector("#out2");
+            var totalSoma = somaPar(num);
+            var totalSomaImp = somaImp(num);
+
+            function somaPar(arr){       
+                var soma = 0; // recebe o valor da soma
+                for( var i = 0; i < arr.length; i++){ // .length deine a quantidade de elementos da array
+                    if(arr[i] % 2 === 0 && !isNaN(arr[i])){ // verifica se o valor é par
+                        console.log(`indice ${i} = ${arr[i]}, Par`)
+                        soma += arr[i]; //soma os valores
+                    }
+                }
+                return soma;
+            }
+            function somaImp(arr){       
+                var soma = 0; // recebe o valor da soma
+                for( var i = 0; i < arr.length; i++){ // .length deine a quantidade de elementos da array
+                    if(arr[i] % 2 !== 0 && !isNaN(arr[i])){ // verifica se o valor é par
+                        console.log(`indice ${i} = ${arr[i]}, Impar`)
+                        soma += arr[i]; //soma os valores
+                    }
+                }
+                return soma;
+            }
+
+            out.innerHTML = totalSoma;
+            out2.innerHTML = totalSomaImp;
+            //alert(`Bem Vindo, hoje é ${Dias[hoje.getDay()]}`)
+        </script>
+    </body>
+</html>

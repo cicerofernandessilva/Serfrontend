@@ -1,0 +1,62 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Funções</h1>
+        <button onclick="area(l)">Mostrar Área Total</button>
+        <div id="javascript"></div>
+        <script>
+            var l = prompt("Digite o número da Largura");
+            l = parseFloat(l);
+            out(l);
+            function out(mensagem){ // responsavel por escrever na div
+                var javascript = document.querySelector('#javascript'); // faz com que o id javascript escreva os conteudos descritos no javascript
+                javascript.innerHTML = mensagem; // atribui o valor de n ao id javascript
+            }
+            function area(l){ // responsavel por pedir número e interagir com outras funçoes para retorno do calculo
+                var n1 = document.querySelector('#javascript').textContent; // testo descrito na div
+                n1 = parseFloat(n1);
+                var n2 = prompt("Digite o número da altura");
+                n2 = parseFloat(n2);
+                //var msg = calcular( n1, n2);
+                try{ 
+                    var msg = calcular( n1, n2);
+                } catch(e){
+                    console.log(e);
+                    return;
+                }
+                out(msg);
+
+            }
+
+            function calcular(n1, n2){
+                var nuCalc = null; // vai armazenar o calculo
+                if(n1 === undefined || n2 === undefined){
+                    throw new Error('Um valor não foi definido');
+                }
+
+                if(isNaN(n1)||isNaN(n2)){
+                    throw new Error('Letras não são calculadas');
+                }
+                nuCalc = n1 * n2;
+                
+                return nuCalc; // devolve o resultado do calculo
+            }          
+        </script>
+    </body>
+</html>

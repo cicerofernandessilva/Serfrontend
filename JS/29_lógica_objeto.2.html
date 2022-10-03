@@ -1,0 +1,43 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+    <body>
+        <h1>Lógica de Programação - Objeto</h1>
+        <h2>Produtos</h2>
+        <div id="out"></div>
+        <hr>
+        <script>
+            var produto1 = new Object();
+            produto1.marca = "Caneta Bic";
+            produto1.cor = "Azul";
+            produto1.preco = 1.50;
+            produto1.estoque = 50;
+            produto1.comprar = function(qtd){
+                if(!qtd){
+                    qtd = 1
+                }
+                this.estoque = this.estoque - qtd;
+                console.log(this.estoque)
+            }
+            
+            console.log(produto1);
+            //alert(JSON.stringify(caneta));
+            var mens = '';
+            mens += `Produto ${produto1.marca}, <br>`;
+            mens += `Cor ${produto1.cor}, <br>`;
+            mens += `Preço R$${produto1.preco}, <br>`;
+            mens += `Estoque ${produto1.estoque}, <br>`;
+
+            document.querySelector("#out").innerHTML = mens;
+
+            //alert(`Bem Vindo, hoje é ${Dias[hoje.getDay()]}`)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+    <body>
+        <h1>Lógica de Programação - Objeto</h1>
+        <h2>Produtos</h2>
+        <div id="out"></div>
+        <hr>
+        <script>
+            var caneta = new Object();
+            caneta.marca = "Caneta Bic";
+            caneta.cor = "Azul";
+            caneta.preco = 1.50;
+            caneta.estoque = 50;
+            console.log(caneta);
+            //alert(JSON.stringify(caneta));
+            var mens = `Produto ${caneta.marca}, <br> Cor ${caneta.cor}, <br> Preço R$${caneta.preco}, <br> Estoque ${caneta.estoque}, <br>`;
+
+            var out = document.querySelector("#out");
+        
+            //out.innerHTML = JSON.stringify(caneta);
+            out.innerHTML = mens;
+
+            //alert(`Bem Vindo, hoje é ${Dias[hoje.getDay()]}`)
+        </script>
+    </body>
+</html>
