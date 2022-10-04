@@ -1,0 +1,47 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                font-family: sans-serif;
+                background: #ccc;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Array Com Objeto</h1>
+        <h2>Produtos</h2>
+        <div id="out"></div>
+        <hr>
+        <script>
+            var produtos = [
+                { "marca" : "Caneta Bic", "cor": "Azul", "preco": 1}, //separado por virgula normal
+                { "marca" : "Caderno Tilibra", "cor": "Azul", "preco": 10},
+                { "marca" : "Lapizeira", "cor": "Azul", "preco": 1},
+                { "marca" : "Borracha", "cor": "Verde", "preco": 1}
+            
+            ]
+            
+            console.log(produtos);
+            //alert(JSON.stringify(produtos));
+            var mens = '';
+            for(var i = 0; i < produtos.length; i++){
+                mens += `<h2>Produto ${produtos[i].marca},</h2> <br>`;
+                mens += `<p>Cor ${produtos[i].cor},</p> <br>`;
+                mens += `<p>Preço R$${produtos[i].preco},</p> <br>`;
+            }
+
+            document.querySelector("#out").innerHTML = mens;
+
+            //alert(`Bem Vindo, hoje é ${Dias[hoje.getDay()]}`)
+        </script>
+    </body>
+</html>

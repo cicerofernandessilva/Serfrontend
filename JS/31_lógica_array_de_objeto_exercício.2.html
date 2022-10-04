@@ -1,0 +1,50 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                font-family: sans-serif;
+                background: #ccc;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lógica de Programação - Array Com Objeto</h1>
+        <h2>Produtos</h2>
+        <div id="out"></div>
+        <hr>
+        <script>
+            var user1 = new Object()
+            user1.nome = "Maria";
+            user1.email = "maria@server.com";
+            var user2 = new Object()
+            user2.nome = "Maiara";
+            user2.email = "maiara@server.com";
+            var user3 = new Object()
+            user3.nome = "Mirna";
+            user3.email = "mirna@server.com";
+            var users = new Array(user1, user2, user3);
+            console.log(users);
+            //alert(JSON.stringify(produtos));
+            var mens = '';
+            var i = 0;
+            while(users[i]){
+                mens += `<h2>Cliente: ${users[i].nome},</h2> <br>`;
+                mens += `<p>E-mail para contato: ${users[i].email},</p> <br>`;
+                i++;
+            }
+
+            document.querySelector("#out").innerHTML = mens;
+
+            //alert(`Bem Vindo, hoje é ${Dias[hoje.getDay()]}`)
+        </script>
+    </body>
+</html>
