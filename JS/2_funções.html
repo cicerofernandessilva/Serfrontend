@@ -1,0 +1,68 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Programação - Funções</h1>
+        <div id="javascript"></div>
+        <script>
+            var n = 10;
+            var n2;
+            let n1 = 10;
+            let n3;
+
+            function test(){
+                var n = 20;
+                var n3;
+                let n1 = 20;
+                let n2;
+                console.log("Dentro de function",n)
+                console.log("Dentro de function",n1)
+                console.log("Dentro de function",n2)
+                console.log("Dentro de function",n3)
+            };
+            test()
+            console.log("Fora / global", n);
+            console.log("Fora / global", n1);
+            console.log("Fora / global", n2);
+            console.log("Fora / global", n3);
+
+            function test2(){
+                n4 = 20;
+                n3 = 12;
+                let n5 = 30;
+                var n6 = 30;
+                console.log("Dentro de function n4", n4);
+                console.log("Dentro de function n3", n3);
+                console.log("Dentro de function n5", n5);
+                console.log("Dentro de function n6", n6);
+            };
+            test2();
+            console.log("Fora / global n4", n4);
+            console.log("Fora / global n3", n3);
+            console.log("Fora / global n5", n5);//não sai para fora da função
+            console.log("Fora / global n6", n6);//não sai para fora da função
+
+            function out(){
+                var javascript = document.querySelector('#javascript'); // faz com que o id javascript escreva os conteudos descritos no javascript
+                javascript.innerHTML = n; // atribui o valor de n ao id javascript
+            }
+            out();
+      
+        </script>
+    </body>
+</html>
