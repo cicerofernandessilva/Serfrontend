@@ -1,0 +1,81 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Programação - Funções Exercicio IMC</h1>
+        <div id="javascript"></div>
+        <script>
+            (function(){
+                'use strict';
+                var p = prompt("Digite seu peso")
+                p = parseFloat(p)
+                var a = prompt("Digite sua altura")
+                a = parseFloat(a)
+                var init = function imc(p, a) {
+                    var result = 0;
+                    if(typeof p === "number" && typeof a === "number"){
+                        result = p/ (a**2);
+                    }else{
+                        result = NaN;
+                    }
+                    return result;
+                }
+                
+                var im = init(p, a);
+                im = parseFloat(im);
+
+                console.log(im);
+
+                var second = function classificacao() {
+                        var total = " ";
+                        if( im <= 0.00169 || im === 0.0016){
+                            total = "Muito abaixo do peso!";
+                        }else if( im === 0.0017 || im <= 0.00184 ){
+                            total = "Abaixo do peso!";
+                        }else if( im <= 0.00249 || im === 0.00185 ){
+                            total = "Peso normal!";
+                        }else if( im <= 0.00299 || im === 0.0025 ){
+                            total = "Acima do peso!";
+                        }else if( im <= 0.00349 || im === 0.0030 ){
+                            total = "Obesidade Grau 1!";
+                        }else if( im <= 0.0040 || im === 0.0035 ){
+                            total = "Obesidade Grau 2!";
+                        }else if( im > 0.0040 ){
+                            total = "Obesidade Grau 3!";
+                        }else {
+                            total = "Você é um monstro!";
+                        }
+                        var ind = im*10000;
+                        ind = Math.round(ind);
+
+                        console.log(total);
+                        return `Seu IMC é ${ind}, e você está ${total}`;
+
+                }
+                console.log(second(im))
+                
+                var out = second(im);
+                
+                var javascript = document.querySelector('#javascript');
+                
+                javascript.innerHTML = out; // atribui o valor de n ao id javascript
+
+            })();
+        </script>
+    </body>
+</html>

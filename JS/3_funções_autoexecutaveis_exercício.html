@@ -1,0 +1,47 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Programação - Funções Autoexecutáveis</h1>
+        <div id="javascript"></div>
+        <script>
+            var out = ( function(){
+                'use strict';
+                function media() {
+                    console.log(arguments)
+                    var total = 0;
+                    var qtd = arguments.length
+                    var i = 0;
+                    while(typeof arguments[i] === "number"){ // colocado typeof devido 0 ser um número invalido, o que daria um erro ao usar apenas arguments[i]
+                        total += arguments[i];
+                        i++;
+                    }
+                    return total/ qtd;
+                }
+                var media1 = media(20, 30, 40, 50, 25, 80);
+                media1 = parseInt(media1)
+                var media2 = media(20, 0, 30, 40);
+                return `Valor da média 1 é ${media1}, <br> o valor da média 2 é ${media2}`;
+            })()
+            console.log(out)
+
+            var javascript = document.querySelector('#javascript').innerHTML = out; // atribui o valor de n ao id javascript
+      
+        </script>
+    </body>
+</html>
