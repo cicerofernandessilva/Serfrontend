@@ -1,0 +1,39 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            #javascript{
+                text-align: center;
+                font-size: 2em;
+                font-weight: bold;
+                text-shadow: 3px 3px rgb(155, 151, 151);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Programação - DOM </h1>
+        <input type="text" id="nome" value="Digite seu nome"><button onclick="action()">Enviar</button>
+        <div id="text"></div>
+        <script>
+            var textNome = document.querySelector("#nome");
+            function action(){   
+                var nome = textNome.value;
+                console.log(nome);
+                console.log(textNome);
+                document.getElementById("text").innerHTML = `Bem vindo <b>${nome}</b>!`; // colocar apenas o texto em negrito com HTML, só funciona com o innerHTML a tag HTML
+            }
+        </script>
+    </body>
+</html>
