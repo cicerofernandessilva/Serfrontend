@@ -1,0 +1,40 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            #javascript{
+                text-align: center;
+                font-size: 2em;
+                font-weight: bold;
+                text-shadow: 3px 3px rgb(155, 151, 151);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Programação - Funções Exercicio IMC</h1>
+        <div id="javascript"></div>
+        <script>
+            (function(){
+                'use strict';
+                var nome = prompt("Digite seu nome");
+                
+                //var javascript = document.querySelector('#javascript');
+                //javascript.innerHTML = nome; // atribui o valor de n ao id javascript
+                document.getElementById("javascript").textContent = `Bem vindo ${nome}!`;
+                
+            })();
+        </script>
+    </body>
+</html>
