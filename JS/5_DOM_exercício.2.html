@@ -25,6 +25,7 @@
     <body>
         <h1>Programação - DOM </h1>
         <div id="javascript"></div>
+        <div id="text"></div>
         <script>
             (function(){
                 'use strict';
@@ -33,6 +34,7 @@
                 //var javascript = document.querySelector('#javascript');
                 //javascript.innerHTML = nome; // atribui o valor de n ao id javascript
                 document.getElementById("javascript").textContent = `Bem vindo ${nome}!`;
+                document.getElementById("text").innerHTML = `Bem vindo <b>${nome}</b>!`; // colocar apenas o texto em negrito com HTML, só funciona com o innerHTML a tag HTML
                 
             })();
         </script>
