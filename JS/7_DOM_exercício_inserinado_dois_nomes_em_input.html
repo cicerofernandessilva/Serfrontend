@@ -1,0 +1,51 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            #result{
+                text-align: center;
+                font-size: 1em;
+                font-weight: bold;
+                text-shadow: 3px 3px rgb(155, 151, 151);
+            }
+            .cump{
+                padding: .5em;
+                margin: .5em;
+                height: 100px;
+                width: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Programação - DOM </h1>
+        <input type="text" id="nome" value="Digite seu nome">
+        <input type="text" id="sobreNome" value="Digite seu Sobrenome">
+        <button onclick="action()">Enviar</button>
+        <input type="text" class="cump" id="result" value="Seu nome é..." disabled>
+        <script>
+            var textNome = document.querySelector("#nome");
+            var textSobreNome = document.querySelector("#sobreNome");
+            function action(){   
+                var nome = textNome.value;
+                var sobreNome = textSobreNome.value;
+                console.log(nome);
+                console.log(sobreNome);
+                console.log(textNome.value);
+                console.log(textSobreNome.value);
+                document.getElementById("result").value = "Bem vindo "+nome+" "+sobreNome+"!"; // colocar apenas o texto em negrito com HTML, só funciona com o innerHTML a tag HTML
+            }
+        </script>
+    </body>
+</html>
