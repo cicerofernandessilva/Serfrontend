@@ -33,10 +33,13 @@
         <input type="text" id="nome" value="Digite seu nome">
         <input type="text" id="sobreNome" value="Digite seu Sobrenome">
         <button onclick="action()">Enviar</button>
-        <input type="text" class="cump" id="result" value="Seu nome é..." disabled>
+        <input type="text" class="cump" id="result" value="Seu nome é..." >
         <script>
             var textNome = document.querySelector("#nome");
             var textSobreNome = document.querySelector("#sobreNome");
+            //document.getElementById("result").disabled = true ; // ativa e desativa propriedades das tag's HTML
+            document.getElementById("result").readOnly = true ; // ativa e desativa propriedades das tag's HTML
+
             function action(){   
                 var nome = textNome.value;
                 var sobreNome = textSobreNome.value;
