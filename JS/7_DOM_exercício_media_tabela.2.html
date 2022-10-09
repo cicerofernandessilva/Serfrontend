@@ -97,37 +97,43 @@
             </tbody>
         </table>
         <script>
-
-            (function(){
-                var trs = document.querySelectorAll(".js-table tbody .aluno");
-
-                var i = 0;
-
-                while(trs[i]){
-                    var linhaAluno = trs[i];   
-                    //console.log(linhaAluno)
+            /* 
+            loop da função calcular media, vamos criar um loopp que percorra as linhas de uma tabela
+            de alunos, encontre as quatros notas (n1, n2 ..) e mostre a media correspondente de cada aluno.
+            tr Linha
+            td Coluna
+            */
+            
+            (function () {
+                var trs = document.querySelectorAll('.js-table tbody .aluno');
+ 
+                var x= 0;
+                while (trs[x]) {
+                    var linhaAluno = trs[x];
+                    console.log(linhaAluno);
+ 
                     var n1, n2, n3, n4, media;
-                    var tds = linhaAluno.querySelectorAll("td");
-                    //console.log(tds);
-                    //console.log(tds[1].textContent);
-                    n1 = notaNur(tds[1]);
-                    //console.log(n1)
-                    n2 = notaNur(tds[2]);
-                    n3 = notaNur(tds[3]);
-                    n4 = notaNur(tds[4]);
+ 
+                    var tds = linhaAluno.querySelectorAll('td');
+                    console.log(tds);
+ 
+                    n1 = pegarNota(tds[1]);
+                    n2 = pegarNota(tds[2]);
+                    n3 = pegarNota(tds[3]);
+                    n4 = pegarNota(tds[4]);
+ 
                     media = calcularMedia(n1, n2, n3, n4);
-                    //console.log(media)
-                    linhaAluno.querySelector(".aluno-m").textContent = media.toFixed(1); // toFixed limite a quantidade de números após a virgula
-                    i++;
-                };
-
-                function notaNur(td){
-                    console.log(typeof td === "number");
+                    linhaAluno.querySelector('.aluno-m').textContent = media;
+                    
+                    x++;
+                }
+ 
+                function pegarNota(td) {
                     return parseFloat(td.textContent);
-                };
-
-            })()
-           
+                }
+ 
+            }) ()
+ 
         </script>
     </body>
 </html>
