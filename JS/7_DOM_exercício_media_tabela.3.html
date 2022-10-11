@@ -1,0 +1,134 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="/JS/beluga.js"></script>
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            td{
+                text-align: center;
+                border: 1px solid black;
+                padding: 10px;
+            }
+            th{
+                background: rgb(212, 200, 200);
+                padding: 15px;
+            }
+
+            table{
+                width: 80%;/*usar 80% da tela*/
+                margin: auto;/*centralizar tudo*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Programação - DOM - Exercício Média Tabela </h1>
+        <h2>Media dos Alunos</h2>
+        <table class="table  js-table">
+            <thead>
+                <tr>
+                    <th class="aluno-nome">Nome</th>
+                    <th>Nota1</th>
+                    <th>Nota2</th>
+                    <th>Nota3</th>
+                    <th>Nota4</th>
+                    <th>Média</th>
+                </tr>
+            </thead>
+            <tfoot>
+                
+            </tfoot>
+            <tbody>
+                <tr class="aluno">
+                    <td class="aluno-nome">Gertrude</td>
+                    <td class="aluno-n1">10</td>
+                    <td class="aluno-n2">8.5</td>
+                    <td class="aluno-n3">6.5</td>
+                    <td class="aluno-n4">7.5</td>
+                    <td class="aluno-m"></td>
+                </tr>
+                <tr class="aluno">
+                    <td class="aluno-nome">Rita</td>
+                    <td class="aluno-n1">5</td>
+                    <td class="aluno-n2">8.5</td>
+                    <td class="aluno-n3">6.5</td>
+                    <td class="aluno-n4">7.5</td>
+                    <td class="aluno-m"></td>
+                    
+                </tr>
+                <tr class="aluno">
+                    <td class="aluno-nome">Jessilda</td>
+                    <td class="aluno-n1">8</td>
+                    <td class="aluno-n2">8.5</td>
+                    <td class="aluno-n3">7</td>
+                    <td class="aluno-n4">7.5</td>
+                    <td class="aluno-m"></td>
+                    
+                </tr>
+                <tr class="aluno">
+                    <td class="aluno-nome">Lindoia</td>
+                    <td class="aluno-n1">6.5</td>
+                    <td class="aluno-n2">8.5</td>
+                    <td class="aluno-n3">10</td>
+                    <td class="aluno-n4">7.5</td>
+                    <td class="aluno-m"></td>
+                </tr>
+                <tr class="aluno">
+                    <td class="aluno-nome">Jessica</td>
+                    <td class="aluno-n1">10</td>
+                    <td class="aluno-n2">9.5</td>
+                    <td class="aluno-n3">10</td>
+                    <td class="aluno-n4">8.5</td>
+                    <td class="aluno-m"></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <script>
+
+            (function(){
+                var trs = document.querySelectorAll(".js-table tbody .aluno");
+
+                var i = 0;
+
+                while(trs[i]){
+                    var linhaAluno = trs[i];   
+                    //console.log(linhaAluno)
+                    var n1, n2, n3, n4, media;
+                    var tds = linhaAluno.querySelectorAll("td");
+                    var listNotas = buscNum(tds);
+                    media = calcularMedia.apply(this, listNotas);
+                    //console.log(media)
+                    linhaAluno.querySelector(".aluno-m").textContent = media.toFixed(1); // toFixed limite a quantidade de números após a virgula
+                    i++;
+                };
+
+                function buscNum(tds){
+                    var i = 0;
+                    var lista = [];
+                    while(tds[i]){
+                        if(!isNaN(tds[i].textContent) && tds[i].textContent !== ""){
+                            lista.push(parseFloat(tds[i].textContent));
+                        }
+                        i++;
+                    }
+                    return lista;
+                };
+
+            })()
+           
+        </script>
+    </body>
+</html>

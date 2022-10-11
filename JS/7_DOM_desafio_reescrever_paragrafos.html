@@ -1,0 +1,67 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="/JS/beluga.js"></script>
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            td{
+                text-align: center;
+                border: 1px solid black;
+                padding: 10px;
+            }
+            th{
+                background: rgb(212, 200, 200);
+                padding: 15px;
+            }
+
+            table{
+                width: 80%;/*usar 80% da tela*/
+                margin: auto;/*centralizar tudo*/
+            }
+
+        </style>
+    </head>
+    <body class="dom">
+        <h1>Programação - DOM - Desafio - Reescrever parágrafos </h1>
+        <h2>Parágrafos</h2>
+        <p id="js">
+            Lorem ipsum enim sodales senectus dolor faucibus platea morbi odio donec est eleifend, vulputate magna consectetur turpis auctor eleifend nec aenean netus cursus. 
+        </p>
+        <p id="js">
+            Lorem ipsum enim sodales senectus dolor faucibus platea morbi odio donec est eleifend, vulputate magna consectetur turpis auctor eleifend nec aenean netus cursus. 
+        </p>
+        <p id="js">
+            Lorem ipsum enim sodales senectus dolor faucibus platea morbi odio donec est eleifend, vulputate magna consectetur turpis auctor eleifend nec aenean netus cursus. 
+        </p>
+        <p id="js">
+            Lorem ipsum enim sodales senectus dolor faucibus platea morbi odio donec est eleifend, vulputate magna consectetur turpis auctor eleifend nec aenean netus cursus. 
+        </p>
+        <p id="js">
+            Lorem ipsum enim sodales senectus dolor faucibus platea morbi odio donec est eleifend, vulputate magna consectetur turpis auctor eleifend nec aenean netus cursus. 
+        </p>
+        <script>
+            (function(){
+                var out = "Este site foi hackeado";
+                var i = 0;
+                while(document.querySelectorAll('#js')[i].length){
+                    var javascript = document.querySelectorAll('#js')[i].innerHTML = out;
+                    i++;
+                }
+
+            })()
+           
+        </script>
+    </body>
+</html>
