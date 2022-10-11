@@ -33,7 +33,7 @@
 
         </style>
     </head>
-    <body>
+    <body class="dom">
         <h1>Programação - DOM - Desafio - Reescrever parágrafos </h1>
         <h2>Parágrafos</h2>
         <p id="js">
@@ -53,9 +53,11 @@
         </p>
         <script>
             (function(){
+                "use strict";
+                
                 var out = "Este site foi hackeado";
                 var i = 0;
-                var javascript = document.querySelectorAll('#js');
+                var javascript = document.getElementsByTagName('p');
                 //console.log(javascript);
                 while(javascript.length){//quantidade de itens dentro de js
                     javascript[i].innerHTML = out;
