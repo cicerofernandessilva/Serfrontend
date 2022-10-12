@@ -1,0 +1,88 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="/JS/beluga.js"></script>
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            td{
+                text-align: center;
+                border: 1px solid black;
+                padding: 10px;
+            }
+            th{
+                background: rgb(212, 200, 200);
+                padding: 15px;
+            }
+
+            table{
+                width: 80%;/*usar 80% da tela*/
+                margin: auto;/*centralizar tudo*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Programação - Valor - Referência </h1>
+        <script>
+
+            (function n1(){
+                "use strict";
+
+                var i = 0; // valor
+                function valor(i){
+                    var y = i;
+                    console.log(y);
+                }
+                valor(10);
+                console.log(i);  
+            })();
+            (function n2(){
+                "use strict";
+
+                var i = 0;
+                function valor(i){
+                    var y = i;
+                    console.log(y);
+                }
+                valor(i);
+                console.log(i);
+            })();
+            (function n3(){
+                "use strict";
+
+                var i = 0;
+                function valor(i){
+                    var y = i;
+                    console.log(++y);
+                }
+                valor(i);
+                console.log(i);  
+            })();
+            (function n4(){
+                "use strict";
+
+                var i = [0]; //array - objeto - referência
+                function valor(i){
+                    var y = i;
+                    y.push(2);
+                    console.log(y);
+                }
+                valor(i);
+                console.log(i);  
+            })()    
+           
+        </script>
+    </body>
+</html>
