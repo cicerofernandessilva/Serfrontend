@@ -81,7 +81,26 @@
                 }
                 valor(i);
                 console.log(i);  
-            })()    
+            })();   
+            
+            (function n4(){
+                "use strict";
+
+                function mudarCor(cor){ // alterar dados do objeto
+                    this.cor = cor;
+                };
+
+                var caneta1 = {
+                    modelo: "caneta bic",
+                    cor: "Azul",
+                    mudaCor: mudarCor
+                };
+
+                console.log(caneta1);
+                caneta1.mudaCor("vermelho");
+                console.log(caneta1)
+
+            })();   
            
         </script>
     </body>

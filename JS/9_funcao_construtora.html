@@ -1,0 +1,136 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="/JS/beluga.js"></script>
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            td{
+                text-align: center;
+                border: 1px solid black;
+                padding: 10px;
+            }
+            th{
+                background: rgb(212, 200, 200);
+                padding: 15px;
+            }
+
+            table{
+                width: 80%;/*usar 80% da tela*/
+                margin: auto;/*centralizar tudo*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Programação - Valor - Referência </h1>
+        <script>
+
+            (function n1(){
+                "use strict";
+
+                function caneta(preco, cor){ // sem alteração de parámetros
+                    this.preco = 1; 
+                    this.cor = "red";
+                    this.mudarCor = function(cor){
+                        this.cor = cor;
+                    };
+                };
+
+                var caneta1 = new caneta(1, 'blue');
+                console.log("caneta1");
+                console.log(caneta1);
+                var caneta2 = new caneta(3, 'yellow');
+                console.log("caneta2");
+                console.log(caneta2);
+            })();   
+            (function n2(){
+                "use strict";
+
+                function caneta(preco, cor){ // com alteração de parámetros
+                    this.preco = preco || 1; 
+                    this.cor = cor || "red";
+                    this.mudarCor = function(cor){
+                        this.cor = cor;
+                    };
+                };
+
+                var caneta3 = new caneta(2, 'blue');
+                console.log("caneta3");
+                console.log(caneta3);
+                var caneta4 = new caneta();
+                console.log("caneta4");
+                console.log(caneta4);
+            })();   
+            (function n3(){
+                "use strict";
+
+                function caneta(preco, cor){ // sem alteração de parámetros cor, necessário chamar a function para visualizar a cor
+                    this.preco = preco || 1; 
+                    var color = cor || "red";
+                    this.mudarCor = function(cor){
+                        color = cor;
+                    };
+                    this.mostrarCor = function(){
+                        return color;
+                    }
+                };
+
+                var caneta5 = new caneta(2, 'blue');
+                console.log("caneta5");
+                console.log(caneta5);
+                console.log(caneta5.mostrarCor());
+                caneta5.mudarCor("greem");
+                console.log(caneta5.mostrarCor());
+                var caneta6 = new caneta();
+                console.log("caneta6");
+                console.log(caneta6);
+                console.log(caneta6.mostrarCor());
+                caneta6.mudarCor("yellow");
+                console.log(caneta6.mostrarCor());
+            })();   
+            (function n4(){
+                "use strict";
+
+                function caneta(preco, cor){ // sem alteração de parámetros cor, necessário chamar a function para visualizar a cor
+                    this.preco = preco || 1; 
+                    var color = cor || "red";
+                    this.mudarCor = function(cor){ // modo de filtro simples para evitar corres invalidas
+                        if( cor !== "red" && cor !== "blue" && cor !== "green" && cor !== "yellow" && cor !== "black" ){
+                            return console.log("Esta cor é inválida");
+                        }
+                        color = cor;
+                    };
+                    this.mostrarCor = function(){
+                        return color;
+                    }
+                };
+
+                var caneta7 = new caneta(2, 'blue');
+                console.log("caneta7");
+                console.log(caneta7);
+                console.log(caneta7.mostrarCor());
+                caneta7.mudarCor("greem");
+                console.log(caneta7.mostrarCor());
+                var caneta8 = new caneta();
+                console.log("caneta8");
+                console.log(caneta8);
+                console.log(caneta8.mostrarCor());
+                caneta8.mudarCor("yellow");
+                console.log(caneta8.mostrarCor());
+            })();   
+           
+        </script>
+    </body>
+</html>
