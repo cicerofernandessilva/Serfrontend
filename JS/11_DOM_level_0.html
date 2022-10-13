@@ -1,0 +1,36 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM level 0</h1>
+        <button id="clk1" onclick="clicar()">Botão 1</button>
+        <button id="clk2" >Botão 2</button>
+        <script> 
+            (function n1(){
+                var clk2 = document.getElementById('clk2');
+                var clk1 = document.getElementById('clk1');
+
+                clk2.onclick = clicar;
+                clk1.onclick = clicar;
+
+                function clicar(){
+                    console.log("Você cliclou")
+                };
+
+            })();   
+           
+        </script>
+    </body>
+</html>

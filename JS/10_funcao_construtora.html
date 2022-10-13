@@ -85,6 +85,36 @@
                 };
 
             })();   
+            // array com objeto
+            (function n4(){
+                "use strict";
+                var p1 = {
+                    nome: "Angelica",
+                    sobreNome: "Fernandes",
+                };
+                var p2 = {
+                    nome: "Angela",
+                    sobreNome: "Silva",
+                };
+                var p3 = {
+                    nome: "Sullyan",
+                    sobreNome: "Fernandes",
+                };
+
+                var pessoa = [
+                    p1, p2, p3
+                ]
+
+                console.log("---------------------");
+                console.log("Array 2");
+                var i = 0; 
+                while( pessoa[i]){
+                    console.log("--------------------");
+                    console.log(i+" - " + pessoa[i].nome + " " + pessoa[i].sobreNome);
+                    i++;
+                };
+
+            })();  
            
         </script>
     </body>
