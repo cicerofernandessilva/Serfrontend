@@ -1,0 +1,75 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="/JS/beluga.js"></script>
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            td{
+                text-align: center;
+                border: 1px solid black;
+                padding: 10px;
+            }
+            th{
+                background: rgb(212, 200, 200);
+                padding: 15px;
+            }
+
+            table{
+                width: 80%;/*usar 80% da tela*/
+                margin: auto;/*centralizar tudo*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Programação - Valor - Referência </h1>
+        <script> 
+            //função foi colocada no escopo global
+            var Caneta = (function(window){
+                "use strict";
+                function _Caneta(preco, cor){ // sem alteração de parámetros cor, necessário chamar a function para visualizar a cor
+                    this.preco = preco || 1; 
+                    var color = cor || "red";
+                    this.mudarCor = function(cor){ // modo de filtro simples para evitar corres invalidas
+                        if( cor !== "red" && cor !== "blue" && cor !== "green" && cor !== "yellow" && cor !== "black" ){
+                            return console.log("Esta cor é inválida");
+                        }
+                        color = cor;
+                    };
+                    this.mostrarCor = function(){
+                        return color;
+                    }
+                };
+
+                var caneta7 = new _Caneta(2, 'blue');
+                console.log("caneta7");
+                console.log(caneta7);
+                console.log(caneta7.mostrarCor());
+                caneta7.mudarCor("greem");
+                console.log(caneta7.mostrarCor());
+                var caneta8 = new _Caneta();
+                console.log("caneta8");
+                console.log(caneta8);
+                console.log(caneta8.mostrarCor());
+                caneta8.mudarCor("yellow");
+                console.log(caneta8.mostrarCor());
+
+                return _Caneta;
+
+            })(window);   
+           
+        </script>
+    </body>
+</html>
