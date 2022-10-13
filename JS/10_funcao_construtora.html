@@ -1,0 +1,111 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="/JS/beluga.js"></script>
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            td{
+                text-align: center;
+                border: 1px solid black;
+                padding: 10px;
+            }
+            th{
+                background: rgb(212, 200, 200);
+                padding: 15px;
+            }
+
+            table{
+                width: 80%;/*usar 80% da tela*/
+                margin: auto;/*centralizar tudo*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Programação - Valor - Referência </h1>
+        <script> 
+            (function n1(){
+                "use strict";
+                var p1 = {
+                    nome: "Angelica",
+                    sobreNome: "Fernandes",
+                };
+                var p2 = {
+                    nome: "Angela",
+                    sobreNome: "Silva",
+                };
+                var p3 = {
+                    nome: "Sullyan",
+                    sobreNome: "Fernandes",
+                };
+
+                console.log(p1.nome + " " + p1.sobreNome);
+                console.log(p2.nome + " " + p2.sobreNome);
+                console.log(p3.nome + " " + p3.sobreNome);
+
+            })();   
+            //com loop 
+            (function n2(){
+                "use strict";
+                window.p1 = {
+                    nome: "Angelica",
+                    sobreNome: "Fernandes",
+                };
+                window.p2 = {
+                    nome: "Angela",
+                    sobreNome: "Silva",
+                };
+                window.p3 = {
+                    nome: "Sullyan",
+                    sobreNome: "Fernandes",
+                };
+
+                for( var i = 1; i <= 3; i++){
+                    console.log("--------------------");
+                    console.log(i+" - " + window["p"+i].nome + " " + window["p"+i].sobreNome);
+                };
+
+            })();   
+            // com array
+            (function n3(){
+                "use strict";
+                var pessoa = [
+                    {
+                        nome: "Angelica",
+                        sobreNome: "Fernandes",
+                    },
+                    {
+                        nome: "Angela",
+                        sobreNome: "Silva",
+                    },
+                    {
+                        nome: "Sullyan",
+                        sobreNome: "Fernandes",
+                    },
+                ];
+                console.log("---------------------");
+                console.log("Array");
+                var i = 0; 
+                while( pessoa[i]){
+                    console.log("--------------------");
+                    console.log(i+" - " + pessoa[i].nome + " " + pessoa[i].sobreNome);
+                    i++;
+                };
+
+            })();   
+           
+        </script>
+    </body>
+</html>
