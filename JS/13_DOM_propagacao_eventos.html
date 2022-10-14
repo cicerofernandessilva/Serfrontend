@@ -1,0 +1,61 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+            }
+            div{
+                background: rgba(255, 0, 0, 0.336);
+                padding: 25px;
+            }
+            p{
+                background: rgba(0, 0, 255, 0.397);
+                padding: 15px;
+            }
+            span{
+                background: rgba(255, 255, 0, 0.295);
+                padding: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Propogação de eventos</h1>
+        <div id="div">
+            elemento da div
+            <p>Elemento do parágrafo<span> - elemento da spam - </span>Elemento do parágrafo</p>
+        </div>
+        <script> 
+            (function n1(){
+                var div = document.querySelector('#div');
+                var p = document.querySelector('#div p');
+                var span = document.querySelector('#div span');
+
+                div.addEventListener("click", function () { // o addEventListener necessita de dois parametros, evento e função
+                    console.log("Primeiro evento");
+                });
+                p.addEventListener("click", function () {
+                    console.log("Segundo evento");
+                });
+                span.addEventListener("click", function () {
+                    console.log("terceiro evento");
+                });
+
+
+
+            })();   
+           
+        </script>
+    </body>
+</html>

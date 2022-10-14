@@ -1,0 +1,106 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: left;
+                font-size: 1.5em;
+                background: #ccc;
+                line-height: 3em;
+            }
+            div{
+                background: rgba(255, 0, 0, 0.336);
+                padding: 1.56em;
+
+            }
+            p{
+                background: rgba(0, 0, 255, 0.397);
+                padding: 0.937em;
+            }
+            span{
+                background: rgba(255, 255, 0, 0.295);
+                padding: 0.625em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Delegação de eventos</h1>
+        <div id="div1">
+            <ul>
+                Ul
+                <li>Lista 1</li>
+                <li>Lista 2</li>
+                <li>Lista 3</li>
+                Ul
+            </ul>
+        </div>
+        <div id="div2">
+            <ul>
+                Ul
+                <li>Lista 1</li>
+                <li>Lista 2</li>
+                <li>Lista 3</li>
+            </ul>
+        </div>
+        <script> 
+            (function n1(){ // não delegadas
+                var $ul = document.querySelector('#div1 ul');
+                var $lis = document.querySelectorAll('#div1 li');
+
+                $ul.addEventListener("click", function (e) { // o addEventListener necessita de dois parametros, evento e função
+                    console.log("Clicou na ul");
+                    console.log(e);
+                    e.stopPropagation(); // finaliza o evento após execução
+                });
+                /*$lis.addEventListener("click", function (e) {
+                    console.log("Clicou na Li");
+                    console.log(e);
+                    e.stopPropagation();
+                });*/
+
+                var n = 1;
+                var i = 0;
+                while($lis[i]){
+                    $lis[i].addEventListener("click", function(e) {
+                        e.stopPropagation();
+                        console.log("Clicou na Li ");
+
+                    });
+                    i++;
+                };
+
+                
+
+
+
+            })();   
+            (function n2(){ // delegadas
+                var $ul = document.querySelector('#div2 ul');
+                var $lis = document.querySelectorAll('#div2 li');
+
+                $ul.addEventListener("click", function (e) { // o addEventListener necessita de dois parametros, evento e função
+                    e.stopPropagation(); // finaliza o evento após execução
+                    console.log(this);
+                    console.log(e.target);
+                    console.log(e.currentTarget);
+                    console.log(e);
+                    console.log(e.target.nodeName)
+                    if(e.target.nodeName === "LI"){
+                        alert("Clicou no Li");
+                    }
+                });
+
+            })();   
+           
+        </script>
+    </body>
+</html>

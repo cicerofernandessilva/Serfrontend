@@ -1,0 +1,69 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: center;
+                font-size: 1.5em;
+                background: #ccc;
+                line-height: 3em;
+            }
+            div{
+                background: rgba(255, 0, 0, 0.336);
+                padding: 1.56em;
+
+            }
+            p{
+                background: rgba(0, 0, 255, 0.397);
+                padding: 0.937em;
+            }
+            span{
+                background: rgba(255, 255, 0, 0.295);
+                padding: 0.625em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Propogação de eventos</h1>
+        <div id="div">
+            elemento da div
+            <p>Elemento do parágrafo<span> - elemento da spam - </span>Elemento do parágrafo</p>
+        </div>
+        <script> 
+            (function n1(){
+                var div = document.querySelector('#div');
+                var p = document.querySelector('#div p');
+                var span = document.querySelector('#div span');
+
+                div.addEventListener("click", function (e) { // o addEventListener necessita de dois parametros, evento e função
+                    console.log("Primeiro evento");
+                    console.log(e);
+                    e.stopPropagation(); // finaliza o evento após execução
+                });
+                p.addEventListener("click", function (e) {
+                    console.log("Segundo evento");
+                    console.log(e);
+                    e.stopPropagation();
+                });
+                span.addEventListener("click", function (e) {
+                    console.log("terceiro evento");
+                    console.log(e);
+                    e.stopPropagation();
+                }); // false é padrão do terceiro elemento do evento
+
+
+
+            })();   
+           
+        </script>
+    </body>
+</html>

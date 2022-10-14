@@ -1,0 +1,46 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM level 2</h1>
+        <button id="clk1" >Botão 1</button>
+        <button id="clk2" >Botão 2</button>
+        <script> 
+            (function n1(){
+                var clk2 = document.getElementById('clk2');
+                var clk1 = document.getElementById('clk1');
+
+                clk1.addEventListener("click", function () { // o addEventListener necessita de dois parametros, evento e função
+                    alert("Primeiro evento");
+                });
+                clk1.addEventListener("click", function () {
+                    alert("Segundo evento");
+                });
+                clk2.addEventListener("click", function () {
+                    alert("Primeiro evento");
+                });
+                clk2.addEventListener("click", function () {
+                    alert("Segundo evento");
+                });
+                clk2.addEventListener("click", function () {
+                    console.log("Terceiro evento");
+                });
+
+
+            })();   
+           
+        </script>
+    </body>
+</html>
