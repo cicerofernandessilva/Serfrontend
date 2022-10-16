@@ -1,0 +1,93 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: left;
+                font-size: 1.5em;
+                background: #ccc;
+                line-height: 3em;
+            }
+            div{
+                background: rgba(255, 0, 0, 0.336);
+                padding: 1.56em;
+
+            }
+            p{
+                background: rgba(0, 0, 255, 0.397);
+                padding: 0.937em;
+            }
+            span{
+                background: rgba(255, 255, 0, 0.295);
+                padding: 0.625em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Validando Form - Senha e login com submit</h1>
+        <h2>Formulário 1</h2>
+        <form action="#">
+            <label for="txtUser">Usuário</label>
+            <input type="text" id="txtUser" name="User"> <br>
+            <label for="txtPass">Senha</label>
+            <input type="password" id="txtPass" name="password"> <br>
+            <button id="bt" type="submit">Enviar</button>
+            
+        </form>
+        <h2>Formulário 2</h2>
+        <form action="#" method="POST" id="form2">
+            <label for="txtUser2">Usuário</label>
+            <input type="text" id="txtUser2" name="User"> <br>
+            <label for="txtPass2">Senha</label>
+            <input type="password" id="txtPass2" name="password"> <br>
+            <button id="bt2" type="submit">Enviar</button>
+            
+        </form>
+        <script> 
+            (function n1(){ // não delegadas
+                var $form = document.querySelector('form');
+                var $txtUser = document.querySelector('#txtUser');
+                var $txtPass = document.querySelector('#txtPass');
+                var $bt = document.querySelector('#bt');
+
+                $form.addEventListener("submit", function (e) { // o addEventListener necessita de dois parametros, evento e função
+                    console.log("Clicou em enviar");
+                    console.log(e);
+                    if($txtUser.value === ""|| $txtPass.value === ""){
+                        alert("Prencha todos os campos");
+                        console.log($txtUser.value, txtPass.value);
+                    }
+                    e.stopPropagation(); // finaliza o evento após execução
+                });
+
+            })();   
+            (function n2(){ // não delegadas
+                var $form = document.querySelector('#form2');
+                var $txtUser2 = document.querySelector('#txtUser2');
+                var $txtPass2 = document.querySelector('#txtPass2');
+                var $bt = document.querySelector('#bt2');
+
+                $form.addEventListener("submit", function (e) { // o addEventListener necessita de dois parametros, evento e função
+                    console.log("Clicou em enviar");
+                    console.log(e);
+                    if( !$txtUser2.value || !$txtPass2.value){
+                        alert("Prencha todos os campos");
+                        console.log($txtUser2.value, txtPass2.value);
+                    }
+                    e.stopPropagation(); // finaliza o evento após execução
+                });
+
+            })();   
+           
+        </script>
+    </body>
+</html>
