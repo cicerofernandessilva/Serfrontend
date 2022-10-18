@@ -1,0 +1,46 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: left;
+                font-size: 1.5em;
+                background: #ccc;
+                line-height: 3em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Button</h1>
+        <button>butão 1</button>
+        <button>butão 2</button>
+        <button>butão 3</button>
+        <button>butão 4</button>
+
+        <script> 
+            (function n1(){ // modo 1
+                "use strict";
+                var $bt = document.getElementsByTagName("button");
+
+                for( var i = 0; i < $bt.length; i++){
+                    $bt[i].addEventListener("click", click);
+                }
+                function click(){
+                    console.log(this.textContent);
+                };
+
+            })();   
+             
+           
+        </script>
+    </body>
+</html>

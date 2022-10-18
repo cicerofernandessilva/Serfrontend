@@ -1,0 +1,61 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: left;
+                font-size: 1.5em;
+                background: #ccc;
+                line-height: 3em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Testarea - Limitando quantidade de caracteres</h1>
+        <textarea id="msg" cols="50" rows="10" maxlength="150"></textarea>
+        <p style="display: none;" id="restaCont">Restam <span id="carac"></span> caracteres</p>
+        <script> 
+            (function n1(){ // não delegadas
+                "use strict";
+                var $msg = document.getElementById("msg");
+                var max = $msg.maxLength; // propriedade só funciona com o uso do L maiusculo no javascript
+                var $carac = document.getElementById("carac");
+                var $restaCont = document.getElementById("restaCont");
+                function showMaxCaract(n){
+                    $carac.textContent = n;
+                };
+                showMaxCaract(max);
+
+                function showDisplay(){
+                    $restaCont.style.display = "block";
+                };
+
+                showDisplay();
+
+                $msg.addEventListener("input", contCarac);
+
+                function contCarac(e){
+                    var quantCarac = this.value.length;
+                    var calc = max - quantCarac;
+                    showMaxCaract(calc);
+                    if(quantCarac === max){
+                        alert("Você digitou a quantidade limite de caracteres!");
+                    }
+                };
+                
+                
+
+            })();   
+           
+        </script>
+    </body>
+</html>

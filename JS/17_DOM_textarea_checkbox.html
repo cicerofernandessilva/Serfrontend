@@ -1,0 +1,131 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: left;
+                font-size: 1.5em;
+                background: #ccc;
+                line-height: 3em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Testarea com validador Chackbox</h1>
+        <h2>Contrato 1</h2>
+        <textarea cols="25" rows="2" readonly>Contrato de Serviço</textarea><br>
+        <label>
+            <input type="checkbox" id="chk">Aceito os termos do contrato
+        </label><br>
+        <input type="submit" value="Confirmar" id="sub">
+        <br>
+        <h2>Contrato 2</h2>
+        <textarea cols="25" rows="2" readonly>Contrato de Serviço</textarea><br>
+        <label>
+            <input type="checkbox" id="chk2">Aceito os termos do contrato
+        </label><br>
+        <input type="submit" value="Confirmar" id="sub2">
+        <br>
+        <h2>Contrato 3</h2>
+        <textarea cols="25" rows="2" readonly>Contrato de Serviço</textarea><br>
+        <label>
+            <input type="checkbox" id="chk3">Aceito os termos do contrato
+        </label><br>
+        <input type="submit" value="Confirmar" id="sub3">
+        <br>
+        <h2>Contrato 4</h2>
+        <textarea cols="25" rows="2" readonly>Contrato de Serviço</textarea><br>
+        <label>
+            <input type="checkbox" id="chk4">Aceito os termos do contrato
+        </label><br>
+        <input type="submit" value="Confirmar" id="sub4">
+        <br>
+        <h2>Contrato 5</h2>
+        <textarea cols="25" rows="2" readonly>Contrato de Serviço</textarea><br>
+        <label>
+            <input type="checkbox" id="chk5" checked>Aceito os termos do contrato
+        </label><br>
+        <input type="submit" value="Confirmar" id="sub5">
+        <script> 
+            (function n1(){ // modo 1
+                "use strict";
+                var $chk = document.getElementById("chk");
+                var $sub = document.getElementById("sub");
+
+                $sub.disabled = true;
+
+                $chk.addEventListener("change", function(){
+                    if($chk.checked === true){
+                        sub.disabled = false;
+                    } else {
+                        sub.disabled = true;
+                    }
+                });
+            })();   
+            (function n2(){ // modo 2
+                "use strict";
+                var $chk2 = document.getElementById("chk2");
+                var $sub2 = document.getElementById("sub2");
+
+                $sub2.disabled = true;
+
+                $chk2.addEventListener("change", function(){
+                    if($chk2.checked){
+                        sub2.disabled = false;
+                    } else {
+                        sub2.disabled = true;
+                    }
+                });
+            })();   
+            (function n3(){ // modo 3
+                "use strict";
+                var $chk3 = document.getElementById("chk3");
+                var $sub3 = document.getElementById("sub3");
+
+                $sub3.disabled = true;
+
+                $chk3.addEventListener("change", function(){
+                    sub3.disabled = !$chk3.checked;
+                });
+            })();   
+            (function n4(){ // modo 4
+                "use strict";
+                var $chk4 = document.getElementById("chk4");
+                var $sub4 = document.getElementById("sub4");
+
+                boxcheck();
+
+                $chk4.addEventListener("change", function(){
+                    boxcheck();
+                });
+                function boxcheck(){
+                    sub4.disabled = !$chk4.checked;
+                };
+            })();   
+            (function n5(){ // modo 5 como checked ativo
+                "use strict";
+                var $chk5 = document.getElementById("chk5");
+                var $sub5 = document.getElementById("sub5");
+
+                boxcheck();
+
+                $chk5.addEventListener("change", function(){
+                    boxcheck();
+                });
+                function boxcheck(){
+                    sub5.disabled = !$chk5.checked;
+                };
+            })();   
+           
+        </script>
+    </body>
+</html>
