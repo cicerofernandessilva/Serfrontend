@@ -1,0 +1,53 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: left;
+                font-size: 1.5em;
+                background: #ccc;
+                line-height: 3em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Lista de Tarefas</h1>
+        <input type="text" id="txtNovoItem" >
+        <button id="bt">Novo item</button>
+
+        <ul>
+            <li>Trabalhar</li>
+            <li>Estudar Javascript</li>
+            <li>Jogar jogos</li>
+        </ul>
+
+
+        <script> 
+            (function n1(){ // modo 1
+                "use strict";
+                var $bt = document.querySelector("#bt");
+                var $txtNovoItem = document.querySelector("#txtNovoItem");
+                var $ul = document.querySelector("ul");
+
+                $bt.addEventListener('click', function(){
+                    var txt = $txtNovoItem.value;
+                    $ul.innerHTML += "<li>"+txt+"</li>"; // o innerhtml faz com que o string seja considerado como html
+                    $txtNovoItem.value = ""; // o value recupera e atribui valores ao input
+                    $txtNovoItem.focus(); // o .focus() faz com que o cursor fique com foco no item em questão
+                });
+
+            })();   
+             
+           
+        </script>
+    </body>
+</html>
