@@ -50,18 +50,24 @@
                         incluir();
                     }
                 });
+                
+                $ul.addEventListener('click', function(e){
+                    if(e.target.nodeName === 'LI'){
+                        removeLi(e.target)
+                    }
+                });
 
-                for(var i = 0; i < $lis.length; i++){
-                    $lis[i].addEventListener('click', toggleDone);
-                };
-
-                function toggleDone(){
-                    this.classList.toggle('done');
-                };
+                function removeLi(li){
+                    if(confirm("Desaja realmente remover a "+li.textContent+"?")){ // confirm lança uma confirmação como popup
+                        li.parentNode.removeChild(li); //.parentNode acessa o tag pai e o .removeChild() exclui a tag filha descrita
+                    }
+                }
                 
                 function incluir(){
-                    var txt = "<li>"+$txtNovoItem.value+"</li>";
-                    $ul.innerHTML += txt; // o innerhtml faz com que o string seja considerado como html
+                    var li = document.createElement('li');
+                    var text = document.createTextNode($txtNovoItem.value);
+                    li.appendChild(text);
+                    $ul.appendChild(li);
                     $txtNovoItem.value = ""; // o value recupera e atribui valores ao input
                     $txtNovoItem.focus(); // o .focus() faz com que o cursor fique com foco no item em questão
                 };

@@ -60,8 +60,10 @@
                 };
                 
                 function incluir(){
-                    var txt = "<li>"+$txtNovoItem.value+"</li>";
-                    $ul.innerHTML += txt; // o innerhtml faz com que o string seja considerado como html
+                    var li = document.createElement('li');
+                    var text = document.createTextNode($txtNovoItem.value);
+                    li.appendChild(text);
+                    $ul.appendChild(li);
                     $txtNovoItem.value = ""; // o value recupera e atribui valores ao input
                     $txtNovoItem.focus(); // o .focus() faz com que o cursor fique com foco no item em questão
                 };
