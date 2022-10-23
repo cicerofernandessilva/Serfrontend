@@ -1,0 +1,55 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: left;
+                font-size: 1.5em;
+                background: #ccc;
+                line-height: 3em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Lista de Tarefas</h1>
+        <input type="text" id="txtNovoItem" >
+        <button id="bt">Novo item</button>
+        <p></p>
+
+
+        <script> 
+            (function n1(){ // modo 1
+                "use strict";
+                var $txtNovoItem = document.querySelector("#txtNovoItem");
+                var $js = document.querySelector('p');
+                var $bt = document.querySelector("#bt");
+                $js.textContent = "Seu nome";
+
+                $bt.addEventListener('click', function(){
+                    var txt = $txtNovoItem.value+" ";
+                    var ind1 = txt.indexOf(" ");
+                    var ind2 = txt.indexOf(" ", (++ind1));
+                    //console.log(ind1, ind2);
+                    var sobreNome = txt.slice(ind1, ind2);
+                    var nomeMaisfinal = " "+txt.slice(0,ind1)+" "+txt.slice(ind2) 
+                    //console.log(sobreNome);
+                    //console.log(nomeMaisfinal);
+                    $js.textContent = sobreNome+","+nomeMaisfinal;
+                    
+                });
+
+            })();   
+             
+           
+        </script>
+    </body>
+</html>
