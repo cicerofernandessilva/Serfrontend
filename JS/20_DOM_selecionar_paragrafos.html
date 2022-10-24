@@ -1,0 +1,73 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+        <style>
+            body{
+                text-align: left;
+                font-size: 1.5em;
+                background: #ccc;
+                line-height: 3em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Estudo de DOM - Selecionar Parágrafo</h1>
+        <h2>Primeiro</h2>
+        <p id="js1">Scelerisque per porta commodo aenean pulvinar urna pellentesque, adipiscing suspendisse blandit nisi habitasse consequat ornare, posuere litora aenean aliquam in ligula. 
+            potenti arcu mollis posuere habitant pretium ad luctus in pretium, dapibus nisl sagittis fusce consectetur cubilia non platea, ad id mi imperdiet velit sem lobortis fermentum. 
+            primis inceptos senectus metus congue sagittis tellus suscipit risus facilisis id, tincidunt inceptos tellus ut adipiscing lobortis ut pretium iaculis, egestas senectus auctor senectus torquent semper hac quam lorem. 
+            metus habitasse purus suspendisse id tellus eros orci augue leo, in pulvinar dapibus eu quis aenean iaculis cras, cursus convallis bibendum netus nulla praesent lacus diam. Scelerisque per porta commodo aenean pulvinar urna pellentesque, adipiscing suspendisse blandit nisi habitasse consequat ornare, posuere litora aenean aliquam in ligula. 
+            potenti arcu mollis posuere habitant pretium ad luctus in pretium, dapibus nisl sagittis fusce consectetur cubilia non platea, ad id mi imperdiet velit sem lobortis fermentum. 
+            primis inceptos senectus metus congue sagittis tellus suscipit risus facilisis id, tincidunt inceptos tellus ut adipiscing lobortis ut pretium iaculis, egestas senectus auctor senectus torquent semper hac quam lorem. 
+            metus habitasse purus suspendisse id tellus eros orci augue leo, in pulvinar dapibus eu quis aenean iaculis cras, cursus convallis bibendum netus nulla praesent lacus diam.</p>
+        <h2>Segundo</h2>
+        <p id="js2">
+            Scelerisque per porta commodo aenean pulvinar urna pellentesque, adipiscing suspendisse blandit nisi habitasse consequat ornare.
+        </p>
+
+
+        <script> 
+            (function n1(){ // modo 1
+                "use strict";
+                var $js = document.querySelector('#js1');
+
+                function maior($js){
+                    var txt = $js.textContent;
+                    var p = txt.slice(0, 200);
+                    if( txt.length >= 200){
+                        return $js.textContent = p + ' "';
+                    }   
+                }
+                maior($js);
+            })();
+            
+            (function n2(){ // modo 2
+                "use strict";
+                var $js = document.querySelector('#js2');
+
+                function maior($js){
+                    var txt = $js.textContent;
+                    console.log(txt);
+                    var p = txt.slice(0, 200);
+                    console.log(p)
+                    if(  txt.length >= 200){
+                        return $js.textContent = p + ' "';
+                    }   
+                }
+                maior($js);
+            })();   
+             
+             
+           
+        </script>
+    </body>
+</html>

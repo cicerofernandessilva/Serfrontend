@@ -20,17 +20,19 @@
         </style>
     </head>
     <body>
-        <h1>Estudo de DOM - Lista de Tarefas</h1>
+        <h1>Estudo de DOM - Formatar Nome</h1>
         <input type="text" id="txtNovoItem" >
         <button id="bt">Novo item</button>
-        <p></p>
+        
+        <p id="js1"></p>
+        <p id="js2"></p>
 
 
         <script> 
             (function n1(){ // modo 1
                 "use strict";
                 var $txtNovoItem = document.querySelector("#txtNovoItem");
-                var $js = document.querySelector('p');
+                var $js = document.querySelector('#js1');
                 var $bt = document.querySelector("#bt");
                 $js.textContent = "Seu nome";
 
@@ -47,7 +49,32 @@
                     
                 });
 
+            })();
+            
+            (function n2(){ // modo 2
+                "use strict";
+                var $txtNome = document.querySelector("#txtNovoItem");
+                var $js = document.querySelector('#js2');
+                var $bt = document.querySelector("#bt");
+                $js.textContent = "Seu nome";
+                console.log($txtNome.value)
+
+                $bt.addEventListener('click', function(){
+                    console.log($txtNome.value)
+                    var nome = $txtNome.value;
+                    var ultimoEspaco = nome.lastIndexOf(' ');
+                    if(ultimoEspaco <= 0){
+                        return $txtNome;
+                    }
+                    var ultimoNome = nome.slice(ultimoEspaco + 1);
+                    console.log("ultimoNome", ultimoNome);
+                    var primNome = nome.slice(0, ultimoEspaco);
+                    console.log("PosiçãoUltimoEspaço", ultimoEspaco)
+                    $js.textContent = ultimoNome+", "+primNome;
+                });
+
             })();   
+             
              
            
         </script>
