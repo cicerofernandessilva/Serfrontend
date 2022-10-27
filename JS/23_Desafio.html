@@ -1,0 +1,38 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="beluga.js"></script>
+    </head>
+    <body>
+        <h1>Estrutura básica JS - Imagens Aleatórios com JS e HTML</h1>
+        <div></div>
+        
+        <script>
+            (function(){
+                "use strict";
+                var $dv = document.querySelector('div');
+                window.addEventListener('load', init)
+                
+                function init(){
+                    var img = sortear(6);
+                    if(img === 0){
+                        return $dv.innerHTML ='<img src="images/'+(img+1)+'.jpg" alt="foto">';
+                    }
+                    console.log(img);
+                    console.log('<img src="images/'+img+'.jpg" alt="foto">');
+                    var be = "beluga é um mamifero";
+                    $dv.innerHTML ='<img src="images/'+img+'.jpg" alt="foto">';
+                }
+
+
+            })()
+        </script>
+    </body>
+</html>

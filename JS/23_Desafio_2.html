@@ -1,0 +1,32 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="beluga.js"></script>
+    </head>
+    <body>
+        <h1>Estrutura básica JS - Imagens Aleatórios com JS e CSS</h1>
+        <div></div>
+        
+        <script>
+            (function(){
+                "use strict";
+                window.addEventListener('load', init)
+                
+                function init(){
+                    var img = sortear(5) + 1;
+                    
+                    document.querySelector('body').style.backgroundImage = "url(images/"+ img +".jpg)";
+                } 
+
+
+            })()
+        </script>
+    </body>
+</html>
