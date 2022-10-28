@@ -1,0 +1,98 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <script src="beluga.js"></script>
+    </head>
+    <body>
+        <h1>Estrutura básica JS - Array - Metodos e Parámetros</h1>
+        <div></div>
+        
+        <script>
+            (function(){
+                "use strict";
+                window.addEventListener('load', init)
+
+                function init(){
+                    console.log(arr);
+                }
+                console.log("---------------------------------");
+                var arr = [1,2,3,4,5,6];
+                var arrEvery = arr.every(function(el, i, ob){
+                    return typeof el === "number";
+                });
+                console.log(arrEvery, "arrEvery"); // retorna booleano
+                console.log("---------------------------------");
+                console.log("Length");
+                console.log(arr.length);
+                console.log("---------------------------------");
+                arr.push("string");//inclui elemento ao final do array
+
+                var arrSome = arr.some(function(el){
+                    return typeof el === 'number';
+                });
+
+                console.log(arrSome, "arrSome"); // retorna booleano, contudo se um for verdadeiro já retorna verdadeiro
+                console.log("---------------------------------");
+                var arrFilter = arr.filter(function(el, i, arr){
+                    return typeof el === "number";
+                });
+
+                console.log(arrFilter, "arrFilter"); // retorna array com objetos filtrados de acordo com parametro
+                console.log("---------------------------------");
+                var arrForEach = arr.forEach(function(el, i, arr){
+                    console.log("elemento | ", el, "indice | ", i, "i - | ", arr.toString() );
+                });
+
+                console.log(arrForEach, "arrForEach"); // loop
+                console.log("---------------------------------");
+
+                var arrIndexOf = arr.indexOf(2);
+
+                console.log(arrIndexOf, "arrIndexOf número 2"); // retorna posição do indice
+                console.log("---------------------------------");
+
+                arr.push(20); // Acrescenta elemento ao final do array
+                arr.unshift(20); // Acrescenta elemento ao inicio do array
+                console.log(arr);
+
+                var arrLastIndexOf = arr.lastIndexOf(20);
+
+                console.log(arrLastIndexOf, "arrLastIndexOf número 20"); // retorna posição do indice
+                console.log("---------------------------------");
+                
+                var arrMap = arrFilter.map(function(el, i, arr){
+                    return el * i;
+                });
+
+                console.log(arrFilter, "array inicial");
+                console.log(arrMap, "arrMap"); // modifica cada um dos elementos da array
+                console.log("---------------------------------");
+
+                var arrConcat = arr.concat(arrMap);
+
+                console.log(arr, "array inicial");
+                console.log(arrConcat, "arrConcat"); // modifica cada um dos elementos da array
+                console.log("---------------------------------");
+                
+                var arrJoin = arr.join("**");
+
+                console.log(arr, "array inicial");
+                console.log(arrJoin, "arrJoin"); // transforma array em string, sendo possivel informar o separador
+                console.log("---------------------------------");
+
+                var arrToString = arr.toString();
+
+                console.log(arr, "array inicial");
+                console.log(arrToString, "arrToString"); // transforma array em string, não sendo possivel informar o separador
+                console.log("---------------------------------");
+            })()
+        </script>
+    </body>
+</html>
