@@ -81,7 +81,7 @@
                 console.log(arrConcat, "arrConcat"); // modifica cada um dos elementos da array
                 console.log("---------------------------------");
                 
-                var arrJoin = arr.join("**");
+                var arrJoin = arr.join(" ** ");
 
                 console.log(arr, "array inicial");
                 console.log(arrJoin, "arrJoin"); // transforma array em string, sendo possivel informar o separador
@@ -92,6 +92,93 @@
                 console.log(arr, "array inicial");
                 console.log(arrToString, "arrToString"); // transforma array em string, não sendo possivel informar o separador
                 console.log("---------------------------------");
+
+                arr.push("ultimo"); // acrescenta indice ao final do array
+                console.log(arr, "array inicial");
+                var arrPop = arr.pop(); // remove o ultimo item e guarda na variavel
+                
+
+                console.log(arrPop, "arrPop"); 
+                console.log(arr, "array final");
+                console.log("---------------------------------");
+
+                arr.unshift("primeiro"); // acrescenta indice no inicio do array
+                console.log(arr, "array inicial");
+                var arrShift = arr.shift(); // remove o primeiro item e guarda na variavel
+                
+                console.log(arrShift, "arrShift"); // retor primeiro item guardado na var
+                console.log(arr, "array final");
+                console.log("---------------------------------");
+
+                var arrReduce = arrFilter.reduce(function(anterior, atual, i){
+                    console.log(anterior, 'anterior |', atual, "atual |", i, 'indice |')
+                    return anterior + atual;
+                }); // soma dos elementos da array
+                
+                console.log(arrReduce, "arrReduce"); //  soma de valores do array
+                console.log(arrFilter, "array inicial");
+                console.log("---------------------------------");
+
+                var arrReduce2 = arrFilter.reduce(function(anterior, atual, i){
+                    console.log(anterior, 'anterior |', atual, "atual |", i, 'indice |')
+                    return anterior + atual + i;
+                }); // soma dos elementos da array
+                
+                console.log(arrReduce2, "arrReduce2"); //  soma de valores do array mais indice 
+                console.log(arrFilter, "array inicial");
+                console.log("---------------------------------");
+
+                var arrReduce3 = arrFilter.reduce(function(anterior, atual, i){
+                    console.log(anterior, 'anterior |', atual, "atual |", i, 'indice |')
+                    return anterior + atual + i;
+                },10); // soma dos elementos da array, valor inicial definido "10"
+                
+                console.log(arrReduce3, "arrReduce3"); //  soma de valores do array mais indice e valor inicial
+                console.log(arrFilter, "array inicial");
+                console.log("---------------------------------");
+
+                var arrReduce4 = ["1", '2', '3', '4' , '5'].reduce(function(anterior, atual){
+                    return anterior + atual ;
+                }); 
+                
+                console.log(arrReduce4, "arrReduce4"); // soma de string
+                console.log("---------------------------------");
+
+                var arrReduceRight = ["1", '2', '3', '4' , '5'].reduceRight(function(anterior, atual){
+                    return anterior + atual ;
+                });
+                console.log(arrReduceRight, "arrReduceRight"); // soma de string com ordem modo invertida
+                console.log("---------------------------------");
+
+                console.log(arr, "array inicial"); 
+                var arrReverse = arr.reverse(); // modifica ordem dos elementos da array
+                
+                console.log(arrReverse, "arrReverse"); // modifica ordem dos elementos da array
+                console.log(arr, "array final"); //metodo destrutivo, modifica array original
+                console.log("---------------------------------");
+
+                console.log(arr, "array inicial"); 
+                var arrSlice = arr.slice(2); // mostra parte pre determinada do array
+                
+                console.log(arrSlice, "arrSlice"); // mostra array após a segundo elemento
+                console.log(arr, "array final"); //metodo não destrutivo,não modifica array original
+                console.log("---------------------------------");
+
+                console.log(arr, "array inicial"); 
+                var arrSlice2 = arr.slice(2, 5); // mostra parte pre determinada do array
+                
+                console.log(arrSlice2, "arrSlice2"); // mostra array após a segundo elemento até o 5°
+                console.log(arr, "array final"); //metodo não destrutivo,não modifica array original
+                console.log("---------------------------------");
+
+                console.log(arr, "array inicial"); 
+                var arrSplice = arr.splice(2, 4, 'limão', "melão"); // mostra parte pre determinada do array, inclui e exclui elementos
+                console.log(arr.splice(2, 4), "Splice retrona elementos excluidos"); 
+                
+                console.log(arrSplice, "arrSplice"); // 
+                console.log(arr, "array final"); //metodo não destrutivo,não modifica array original
+                console.log("---------------------------------");
+
             })()
         </script>
     </body>
