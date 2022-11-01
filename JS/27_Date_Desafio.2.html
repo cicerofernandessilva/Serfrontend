@@ -1,0 +1,41 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+    </head>
+    <body>
+        <h1>Estrutura básica JS - Demonstrar tempo para completar ano </h1>
+        <div></div>
+        
+        <script>
+            (function(){
+                "use strict";
+                var $dv = document.querySelector('div');
+                window.addEventListener('load', init)
+                
+                function init(){
+                    var data = new Date();
+
+                    function formatarData(data){
+                        var dia = data.getDate() < 10 ? "0" + data.getDate() : data.getDate();
+                        var mes = data.getMonth() + 1;
+                        mes = mes < 10 ? "0" + mes : mes;
+                        return'Hoje é ' + dia + '/' + mes + '/' + data.getFullYear()
+
+                    };
+
+
+                    $dv.innerHTML = formatarData(data);
+                }
+
+
+            })()
+        </script>
+    </body>
+</html>
