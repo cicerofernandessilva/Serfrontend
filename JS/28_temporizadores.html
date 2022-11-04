@@ -38,9 +38,9 @@
                 var str = " ";
 
                 var executaTest = setTimeout(function(){
-                    for(var i = 0; i < 10000; i++){
+                    for(var i = 0; i < 500; i++){
                         str += "i :" + i + "--";
-                        $dv.textContent += str;
+                        $dv.textContent += str + " || ";
                     }
                 }, 1000); //tempo em milisegundos // executa e para
 

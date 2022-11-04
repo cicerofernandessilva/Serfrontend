@@ -1,0 +1,68 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        <style>
+            .banner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate( -50%, -50%);
+                box-shadow: 0 0 0 1000px rgba(0,0,0, .8);
+                display: none;
+            }
+
+            .banner__close{
+                position: absolute;
+                top: 5px;
+                right: 5px;;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Estrutura básica JS - Temporizador </h1>
+        <div class="banner">
+            <h2>Banner PopUp - Irritante</h2>
+            <button class="banner__close">X</button>
+            <p>Pois mesmo na torrente, tempestade, eu diria até no torvelinho da paixão, é preciso conceber e exprimir sobriedade - o que engrandece a ação.</p>
+            <p>Pois mesmo na torrente, tempestade, eu diria até no torvelinho da paixão, é preciso conceber e exprimir sobriedade - o que engrandece a ação.</p>
+            <p>Pois mesmo na torrente, tempestade, eu diria até no torvelinho da paixão, é preciso conceber e exprimir sobriedade - o que engrandece a ação.</p>
+            <p>Pois mesmo na torrente, tempestade, eu diria até no torvelinho da paixão, é preciso conceber e exprimir sobriedade - o que engrandece a ação.</p>
+        </div>
+        
+        <script>
+            (function(){
+                "use strict";
+                window.addEventListener('load', init)
+                function init(){
+                    var $banner = document.querySelector('.banner');
+                    var $bannerBtn = document.querySelector('.banner__close');
+
+                    $bannerBtn.addEventListener('click', rideBanner);
+
+                    var esconde = null;
+
+                    function showBanner(){
+                        $banner.style.display = "block" ; 
+                        esconde = setTimeout(rideBanner, 2000);
+                    };
+                    function rideBanner(){
+                        $bannerBtn.removeEventListener('click', rideBanner);
+                        $banner.parentNode.removeChild($banner);
+                        clearTimeout(esconde);
+                    };
+
+                    setTimeout(showBanner, 2000);
+
+                }
+
+            })()
+        </script>
+    </body>
+</html>
