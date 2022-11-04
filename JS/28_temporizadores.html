@@ -1,0 +1,51 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+    </head>
+    <body>
+        <h1>Estrutura básica JS - Temporizador </h1>
+        <div></div>
+        
+        <script>
+            (function(){
+                "use strict";
+                var $dv = document.querySelector('div');
+                
+                var n = 0;
+
+                setTimeout(function(){ // executação função em determinado tempo após iniciar
+                    console.log('n', n);
+                }, 1000); //tempo em milisegundos
+
+                function somaUm(){
+                    console.log('n', ++n);
+                    if( n > 10){
+                        clearInterval(ciclo);
+                    }
+                };
+
+                var executa = setTimeout(somaUm, 1000); //tempo em milisegundos // executa e para
+
+                var ciclo = setInterval(somaUm, 2000); //tempo em milisegundos // continua executando, ciclico
+
+                var str = " ";
+
+                var executaTest = setTimeout(function(){
+                    for(var i = 0; i < 10000; i++){
+                        str += "i :" + i + "--";
+                        $dv.textContent += str;
+                    }
+                }, 1000); //tempo em milisegundos // executa e para
+
+
+            })()
+        </script>
+    </body>
+</html>
