@@ -10,7 +10,7 @@
 
 
     </head>
-    <body onload="formatarHora()">
+    <body>
         <h1>Estrutura básica JS - Temporizador - Relogio </h1>
         <div></div>
         
@@ -23,8 +23,9 @@
                 var segundos = data.getSeconds() < 10 ? "0" + data.getSeconds() : data.getSeconds();
                 document.querySelector('div').innerHTML = 'São ' + hora + ':' + minuto + ':' + segundos;
                 console.log('São ' + hora + ':' + minuto + ':' + segundos);
-                setTimeout(formatarHora(), 500);
             };
+            
+            setInterval(formatarHora, 1000);
 
         </script>
     </body>

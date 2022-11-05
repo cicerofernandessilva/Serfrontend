@@ -1,0 +1,46 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+    </head>
+    <body>
+        <h1>Estrutura básica JS - Temporizador - Relogio </h1>
+        <div class="hora"></div>
+        
+        <script>
+            (function(){
+                "use strict";
+                var $hora = document.querySelector(".hora");
+                
+                function getHora(){
+                    var data = new Date();
+                    var h = formatarHora(data.getHours());
+                    var m = formatarHora(data.getMinutes());
+                    var s = formatarHora(data.getSeconds());
+                    console.log('São ' + h + ':' + m + ':' + s);
+                    return 'São ' + h + ':' + m + ':' + s;
+                };
+
+                function formatarHora(a){
+                    return a < 10 ? "0" + a : a;
+                }
+
+                function showHour(getHora){
+                    $hora.textContent = getHora;
+                }
+
+                setInterval(function(){
+                    showHour(getHora());
+                }, 1000);
+            })();
+
+        </script>
+    </body>
+</html>
