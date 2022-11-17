@@ -1,0 +1,95 @@
+<!doctype html>
+<!--o doctype informa ao agente usuário(brawnser) a versão do HTML que deve ser renderizado-->
+<html lang="pt-br">
+    <head>
+        <title>Pagina de exemplo de estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="Author" content="Cídero">
+        <meta name="description" content="Lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+
+    </head>
+    <body>
+        <h1>Estrutura básica JS - Temporizador - Cronômetro </h1>
+        <input type="text" class="cronometro">
+        <button class="start">start</button>
+        <button class="pause">pause</button>
+        <button class="stop">stop</button>
+        
+        <script>
+
+            (function(){
+                "use strict";
+
+                var $start = document.querySelector('.start');
+                var $pause = document.querySelector('.pause');
+                var $stop = document.querySelector('.stop');
+                var $crono = document.querySelector('.cronometro');
+
+                $start.addEventListener('click', start);
+                $pause.addEventListener('click', pause);
+                $stop.addEventListener('click', parar);
+
+                var clickIniciar = 0;
+                var clickPause = 0;
+                var interval = null;
+                var init = false;
+                var tDecor = 0;
+
+                function initCrono(ms){
+                    var ms = tDecor || 0 ;
+                    interval = setInterval(function(){
+                        var msAgora = Date.now();
+                        var diferenca = msAgora - clickIniciar;
+                        $crono.value = format(diferenca + ms);
+                    }, 100);
+                };
+
+                function format(ms){
+                    if(ms < 1000){
+                        return ms;
+                    } else if(ms < 60000){
+                        var s = ms / 1000;
+                        s = parseInt(s);
+                        var c = ms - ( s * 1000);
+                        return s + " : " + c;
+                    } else{
+                        var m = ms / 60000;
+                        m = parseInt(m);
+                        var s = ms / 1000 - (m * 60);
+                        s = parseInt(s);
+                        var c = ms - ( s * 1000)- (m * 60 * 1000);
+                        return m + " : " + s + " : " + c;
+                    }
+                };
+
+                function start(){
+                    clickIniciar = Date.now();
+                    initCrono();
+                    init = true;
+                };
+
+                function pause(){
+                    if(init){
+                        clearInterval(interval);
+                        clickPause = Date.now();
+                        tDecor += (clickPause - clickIniciar);
+                        init = false;
+                    }else {
+                        clickIniciar = Date.now();
+                        initCrono(tDecor);
+                        init = true;
+                    };
+
+                function parar(){
+                   
+                };
+
+
+
+            })()
+
+        </script>
+    </body>
+</html>
