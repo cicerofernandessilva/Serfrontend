@@ -47,46 +47,56 @@
                 };
 
                 function format(ms){
+                    const MIN = 60 * 1000;
+
                     if(ms < 1000){
                         return ms;
-                    } else if(ms < 60000){
+                    } else if(ms < MIN){
                         var s = ms / 1000;
                         s = parseInt(s);
                         var c = ms - ( s * 1000);
                         return s + " : " + c;
                     } else{
-                        var m = ms / 60000;
+                        var m = ms / MIN;
                         m = parseInt(m);
-                        var s = ms / 1000 - (m * 60);
+                        return m + " : " + format(ms - m * MIN); // função recursiva
+
+                        /*var s = ms / 1000 - (m * 60);
                         s = parseInt(s);
-                        var c = ms - ( s * 1000)- (m * 60 * 1000);
-                        return m + " : " + s + " : " + c;
+                        var c = ms - ( s * 1000)- (m * MIN);
+                        return m + " : " + s + " : " + c;*/ // função recursiva ou invocadando a si mesmo
                     }
                 };
 
                 function start(){
+                    if(init) return;
+                    parar()
                     clickIniciar = Date.now();
                     initCrono();
                     init = true;
                 };
 
                 function pause(){
+                    if($crono.value === " ") return;                      
                     if(init){
                         clearInterval(interval);
                         clickPause = Date.now();
                         tDecor += (clickPause - clickIniciar);
-                        init = false;
                     }else {
                         clickIniciar = Date.now();
                         initCrono(tDecor);
-                        init = true;
                     };
-
-                function parar(){
-                   
+                    init = !init; // sempre recebe a negação
                 };
 
-
+                function parar(){
+                    clickIniciar = 0;
+                    clickPause = 0;
+                    tDecor = 0;
+                    init = false;
+                    clearInterval(interval);
+                    $crono.value = " ";
+                };
 
             })()
 
